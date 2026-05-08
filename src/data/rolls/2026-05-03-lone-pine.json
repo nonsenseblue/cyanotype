@@ -1,0 +1,87 @@
+{
+  "id": "2026-05-03-lone-pine",
+  "chapter": "queensland",
+  "dayLabel": "Day 01",
+  "title": {
+    "en": "Lone Pine",
+    "jp": "ローン・パイン",
+    "cn": "龙派恩"
+  },
+  "location": {
+    "en": "Brisbane, QLD",
+    "jp": "ブリスベン, QLD",
+    "cn": "布里斯班, QLD"
+  },
+  "place": {
+    "en": "Lone Pine Koala Sanctuary",
+    "jp": "ローン・パイン・コアラ・サンクチュアリ",
+    "cn": "龙派恩树袋熊保护区"
+  },
+  "date": "5.3.2026",
+  "timeOfDay": {
+    "en": "Morning",
+    "jp": "午前",
+    "cn": "上午"
+  },
+  "essay": [
+    { "kind": "lede-first", "text": {
+      "en": "A zoo? Not really mine — never was.",
+      "jp": "動物園? わたしの好きなものでは、なかった——ずっと、なかった。",
+      "cn": "动物园？并非我所偏爱——一直，都不是。"
+    }},
+    { "kind": "body", "text": {
+      "en": "But this one — the first place I have walked where animals were near enough to touch. Not large. And yet, somehow, wider.",
+      "jp": "けれどここは、わたしがこれまで歩いた中で、動物たちに手の届きそうな初めての場所だった。広いとは言えない。それでも、どこか、広かった。",
+      "cn": "但这里——是我走过的所有地方里，动物近得能伸手触到的第一处。并不大。却，不知为何，更宽阔。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Lawns rolling on and on, going gold with early autumn.",
+      "jp": "芝生はどこまでも続き、初秋の金色に染まってゆく。",
+      "cn": "草坪绵延不尽，染上初秋的金色。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Sky blue. Clouds within reach.",
+      "jp": "空は青く。雲は手の届きそうなところに。",
+      "cn": "天空澄蓝。云朵触手可及。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Koalas. Kangaroos lazing, hopping wherever.",
+      "jp": "コアラ。寝そべるカンガルー、思いのままに跳ねるカンガルー。",
+      "cn": "树袋熊。袋鼠，慵懒地躺着，又随意地跳跃。"
+    }},
+    { "kind": "body", "text": {
+      "en": "A lizard, fleeing. A sheep walking slowly. An ostrich, slower still.",
+      "jp": "走り去るトカゲ。ゆっくり歩く羊。それより、もっとゆっくりなダチョウ。",
+      "cn": "一只蜥蜴，仓皇逃去。一只绵羊，慢慢走着。一只鸵鸟，更慢。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "And so — I, too, came to love the zoo.",
+      "jp": "そうして——わたしもまた、動物園を好きになった。",
+      "cn": "就这样——我也，喜欢上了动物园。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "If someone says they don't like zoos, that only means they have not yet found the one that belongs to them.",
+      "jp": "動物園が好きじゃないと言う人は、まだ、自分にぴったりの動物園に出会っていないだけ。",
+      "cn": "若有人说不喜欢动物园，那不过是因为，他还未遇见属于自己的那一座。"
+    }}
+  ],
+  "credits": {
+    "photographer": "みんみん",
+    "film": "cyanotype 3030",
+    "camera": "Sony α7 III",
+    "developed": "5.4.2026"
+  },
+  "photoBase": "/photos/2026-05-03-lone-pine",
+  "photos": [
+    { "file": "01", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "02", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "03", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "04", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "05", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "06", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "07", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "08", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "09", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "10", "caption": { "en": "—", "jp": "—", "cn": "—" } }
+  ]
+}

@@ -1,0 +1,121 @@
+/* ============================================================
+   content.css — essay typography, decorative dots rule
+   ============================================================ */
+
+/* ---------- Essay (per-roll lede + body + dropline) ---------- */
+
+.essay {
+  max-width: 64ch;
+  margin: 0 auto clamp(64px, 8vw, 112px);
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(15px, 1.25vw, 17px);
+  letter-spacing: 0.005em;
+  line-height: 1.75;
+  color: var(--ink);
+  text-align: left;
+}
+
+.essay p {
+  margin-bottom: 0.9em;
+}
+.essay p:last-child { margin-bottom: 0; }
+
+.essay .essay-lede {
+  font-style: italic;
+  color: var(--ink);
+  font-size: clamp(16.5px, 1.4vw, 19px);
+  line-height: 1.6;
+  margin-bottom: 0.6em;
+}
+
+/* Wide gap when an italic block transitions to a non-italic one (or back) */
+.essay .essay-lede + p:not(.essay-lede) {
+  margin-top: 1.8em;
+}
+
+.essay p:not(.essay-dropline) + .essay-dropline {
+  margin-top: 1.8em;
+}
+
+.essay .essay-dropline {
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* JP adjustments — keep the literary feel */
+html[lang="ja"] .essay {
+  letter-spacing: 0.04em;
+  line-height: 1.95;
+  font-size: clamp(13px, 1.05vw, 14.5px);
+  font-style: normal;
+}
+
+html[lang="ja"] .essay .essay-lede {
+  font-size: clamp(14px, 1.15vw, 15.5px);
+  line-height: 1.85;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html[lang="ja"] .essay .essay-dropline {
+  font-style: normal;
+}
+
+/* CN adjustments — tighter, less literary, more everyday */
+html[lang="zh-Hans"] .essay {
+  letter-spacing: 0.015em;
+  line-height: 1.75;
+  font-size: clamp(13px, 1.05vw, 14.5px);
+  font-style: normal;
+  font-weight: 400;
+}
+
+html[lang="zh-Hans"] .essay .essay-lede {
+  font-size: clamp(14px, 1.15vw, 15.5px);
+  line-height: 1.7;
+  font-style: normal;
+  font-weight: 500;
+}
+
+html[lang="zh-Hans"] .essay .essay-dropline {
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ---------- Decorative dots rule (between sections) ---------- */
+
+.rule {
+  display: grid;
+  grid-template-columns: 140px 1fr 140px;
+  gap: clamp(28px, 3vw, 56px);
+  margin: clamp(56px, 7vw, 96px) 0;
+}
+
+.rule-dots {
+  grid-column: 2;
+  justify-self: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 0.65em;
+  color: var(--ink-faint);
+  line-height: 1;
+  user-select: none;
+}
+
+@media (max-width: 960px) {
+  .rule {
+    grid-template-columns: 120px 1fr 120px;
+    gap: clamp(20px, 2.5vw, 32px);
+  }
+}
+
+@media (max-width: 720px) {
+  .rule {
+    grid-template-columns: 1fr;
+  }
+  .rule-dots {
+    grid-column: 1;
+  }
+}

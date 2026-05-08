@@ -1,0 +1,107 @@
+{
+  "id": "2026-05-01-bondi-beach",
+  "chapter": "sydney",
+  "dayLabel": "Day 02",
+  "title": {
+    "en": "Bondi Beach",
+    "jp": "ボンダイビーチ",
+    "cn": "邦迪海滩"
+  },
+  "location": {
+    "en": "Sydney, NSW",
+    "jp": "シドニー, NSW",
+    "cn": "悉尼, NSW"
+  },
+  "place": {
+    "en": "Bondi Beach",
+    "jp": "ボンダイビーチ",
+    "cn": "邦迪海滩"
+  },
+  "date": "5.1.2026",
+  "timeOfDay": {
+    "en": "Afternoon",
+    "jp": "午後",
+    "cn": "午后"
+  },
+  "essay": [
+    { "kind": "lede-first", "text": {
+      "en": "On the grass — people reading, people sleeping.",
+      "jp": "芝生の上には、本を読む人、眠る人。",
+      "cn": "草地上——读书的人，睡着的人。"
+    }},
+    { "kind": "lede-first", "text": {
+      "en": "On the sand — reading, eating, playing volleyball.",
+      "jp": "砂浜には、本を読む人、何かを食べる人、ビーチバレーに興じる人々。",
+      "cn": "沙滩上——读书的、用餐的、打着排球的。"
+    }},
+    { "kind": "body", "text": {
+      "en": "The day was clear. So were they.",
+      "jp": "その日は晴れていた。人々もまた、晴れやかだった。",
+      "cn": "那天很晴。人们，也很明朗。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Close to the city. Gulls everywhere. Houses bright with colour, in rows.",
+      "jp": "街に近く、カモメはあちらこちらに。色とりどりの家々が、軒を連ねていた。",
+      "cn": "离城不远。海鸥到处都是。色彩明亮的房子，一排排。"
+    }},
+    { "kind": "body", "text": {
+      "en": "For me — an afternoon borrowed.",
+      "jp": "わたしには、借り物の午後。",
+      "cn": "对我而言——一段借来的午后。"
+    }},
+    { "kind": "body", "text": {
+      "en": "For them — any other day.",
+      "jp": "彼らには、ありふれた一日。",
+      "cn": "对他们——再平常不过的一天。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "Quietly, I envied. Quietly, I was drawn.",
+      "jp": "静かに、羨んでいた。静かに、惹かれていた。",
+      "cn": "静静地，羡慕。静静地，被吸引。"
+    }}
+  ],
+  "credits": {
+    "photographer": "みんみん",
+    "film": "cyanotype 3030",
+    "camera": "Sony α7 III",
+    "developed": "5.2.2026"
+  },
+  "photoBase": "/photos/2026-05-01-bondi-beach",
+  "photos": [
+    { "file": "01", "caption": {
+      "en": "Grass, sea, the city behind.",
+      "jp": "芝生、海、その向こうの街。",
+      "cn": "草、海、远处的城。"
+    }},
+    { "file": "02", "caption": {
+      "en": "A lamppost against the blue.",
+      "jp": "青空を背に、ひとつの街灯。",
+      "cn": "一盏路灯，映在蓝天上。"
+    }},
+    { "file": "03", "caption": {
+      "en": "Icebergs, from across the cars.",
+      "jp": "車の向こうに、アイスバーグス。",
+      "cn": "隔着车流，望见冰山泳池。"
+    }},
+    { "file": "04", "caption": {
+      "en": "An afternoon, dropped onto the lawn.",
+      "jp": "芝生の上に、午後がひとつ落ちている。",
+      "cn": "一段午后，落在草地上。"
+    }},
+    { "file": "05", "caption": {
+      "en": "A seagull, among the dandelions.",
+      "jp": "タンポポのあいだに、一羽のカモメ。",
+      "cn": "一只海鸥，落在蒲公英之间。"
+    }},
+    { "file": "06", "caption": {
+      "en": "A walk along the surf line.",
+      "jp": "波打ち際を、ゆっくりと歩く。",
+      "cn": "沿着浪线，慢慢走着。"
+    }},
+    { "file": "07", "caption": {
+      "en": "Houses bright with colour.",
+      "jp": "色とりどりの家々。",
+      "cn": "色彩明亮的房子。"
+    }}
+  ]
+}

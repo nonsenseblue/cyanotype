@@ -1,0 +1,91 @@
+{
+  "id": "2026-04-30-sydney-city",
+  "chapter": "sydney",
+  "dayLabel": "Day 01",
+  "title": {
+    "en": "Sydney City",
+    "jp": "シドニー市内",
+    "cn": "悉尼市内"
+  },
+  "location": {
+    "en": "Sydney, NSW",
+    "jp": "シドニー, NSW",
+    "cn": "悉尼, NSW"
+  },
+  "place": {
+    "en": "City of Sydney",
+    "jp": "シドニー市内",
+    "cn": "悉尼市"
+  },
+  "date": "4.30.2026",
+  "timeOfDay": {
+    "en": "",
+    "jp": "",
+    "cn": ""
+  },
+  "essay": [
+    { "kind": "lede-first", "text": {
+      "en": "Sydney — fair, clean, kept.",
+      "jp": "シドニー——美しく、清く、整っている。",
+      "cn": "悉尼——美丽，洁净，井然。"
+    }},
+    { "kind": "body", "text": {
+      "en": "We stayed in the north. The Opera House — seen from across the water.",
+      "jp": "わたしたちは北側に泊まった。オペラハウスは、水を隔てて遠くに眺めた。",
+      "cn": "我们住在城北。歌剧院——隔着水眺望。"
+    }},
+    { "kind": "body", "text": {
+      "en": "The office side, the morning, busy with feet.",
+      "jp": "オフィス街の朝、足音で賑やか。",
+      "cn": "写字楼一带，清晨，脚步声匆匆。"
+    }},
+    { "kind": "body", "text": {
+      "en": "South: shops, then more shops. The light rail almost the length of it.",
+      "jp": "南へ歩けば、店、また店。ライトレールが、街をほとんど通り抜けてゆく。",
+      "cn": "向南——商店，又是商店。轻轨几乎贯穿整条街。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Double-decker trains. I loved them.",
+      "jp": "二階建ての電車。大好きだった。",
+      "cn": "双层列车。我很喜欢。"
+    }},
+    { "kind": "body", "text": {
+      "en": "April 30. A short rain. After it, a rainbow, bright and whole — as if heaven were watching, kindly.",
+      "jp": "四月三十日。短い雨ののちに、虹がひとつ、まぶしくまるごと——空が、優しく見守ってくれているかのように。",
+      "cn": "四月三十日。一阵短雨之后，一道明亮完整的彩虹——仿佛天，正温柔地注视着。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "To see Sydney from far away, that I prefer.",
+      "jp": "遠くからシドニーを眺めるのが、わたしには似合っている。",
+      "cn": "远远地看悉尼——这样，更合我意。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "I do not belong to this city. This city does not belong to me.",
+      "jp": "わたしはこの街のものではない。この街もまた、わたしのものではない。",
+      "cn": "我不属于这座城。这座城，也不属于我。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "And yet — when I press the shutter, for one breath, our times and our spaces cross.",
+      "jp": "それでも、シャッターを押すその一瞬だけ、わたしたちの時と空間が、ふと交わる。",
+      "cn": "然而——按下快门的那一息，我们的时与空，悄然交错。"
+    }}
+  ],
+  "credits": {
+    "photographer": "みんみん",
+    "film": "cyanotype 3030",
+    "camera": "Sony α7 III",
+    "developed": "5.1.2026"
+  },
+  "photoBase": "/photos/2026-04-30-sydney-city",
+  "photos": [
+    { "file": "01", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "02", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "03", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "04", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "05", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "06", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "07", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "08", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "09", "caption": { "en": "—", "jp": "—", "cn": "—" } }
+  ]
+}

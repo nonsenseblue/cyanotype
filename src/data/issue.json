@@ -1,0 +1,300 @@
+{
+  "id": "vol-01-australia",
+  "brand": "cyanotype",
+  "tagline": {
+    "en": "We live in a handful of moments.",
+    "jp": "人はある瞬間で\n生きてゆく",
+    "cn": "人活在某些瞬间里"
+  },
+  "intro": {
+    "en": "Cyanotype — a 19th-century photographic process that prints the world in deep cyan-blue. A name borrowed here for a quiet record of moments worth keeping.",
+    "jp": "シアノタイプ ―― 十九世紀に生まれた、世界を深い青に焼きつける写真技法。その名を借りて、留めておきたい瞬間を、静かに綴る。",
+    "cn": "Cyanotype——诞生于十九世纪的影像工艺，将世界印在一片深蓝里。借这个名字，安静地，记下那些值得留住的瞬间。"
+  },
+  "volume": "Vol. 02",
+  "title": {
+    "en": "Australia",
+    "jp": "オーストラリア",
+    "cn": "澳大利亚"
+  },
+  "subtitle": {
+    "en": "Five days. May 2026.",
+    "jp": "五日間、二〇二六年五月。",
+    "cn": "五日。二〇二六年五月。"
+  },
+  "chapters": [
+    {
+      "key": "sydney",
+      "volume": "Vol. 02",
+      "issueTitle": {
+        "en": "Australia",
+        "jp": "オーストラリア",
+        "cn": "澳大利亚"
+      },
+      "label": {
+        "en": "Chapter 01",
+        "jp": "第一章",
+        "cn": "第一章"
+      },
+      "title": {
+        "en": "Sydney",
+        "jp": "シドニー",
+        "cn": "悉尼"
+      },
+      "place": {
+        "en": "New South Wales",
+        "jp": "ニューサウスウェールズ",
+        "cn": "新南威尔士"
+      },
+      "lede": {
+        "en": "A city seen from across the water — and a beach borrowed from it.",
+        "jp": "水を隔てて街を眺め、街から借りた海辺を歩く。",
+        "cn": "隔水望城——再走进城所借出的一片海。"
+      },
+      "covers": [
+        { "photoBase": "/photos/2026-05-01-bondi-beach", "file": "04" }
+      ],
+      "days": ["2026-04-30-sydney-city", "2026-05-01-bondi-beach"]
+    },
+    {
+      "key": "queensland",
+      "volume": "Vol. 02",
+      "issueTitle": {
+        "en": "Australia",
+        "jp": "オーストラリア",
+        "cn": "澳大利亚"
+      },
+      "label": {
+        "en": "Chapter 02",
+        "jp": "第二章",
+        "cn": "第二章"
+      },
+      "title": {
+        "en": "Brisbane & Gold Coast",
+        "jp": "ブリスベン & ゴールドコースト",
+        "cn": "布里斯班 & 黄金海岸"
+      },
+      "place": {
+        "en": "Queensland",
+        "jp": "クイーンズランド",
+        "cn": "昆士兰"
+      },
+      "lede": {
+        "en": "A morning among the animals; an afternoon along the surf.",
+        "jp": "動物たちと過ごす朝。波打ち際を歩く午後。",
+        "cn": "与动物相伴的清晨。沿着浪线走过的午后。"
+      },
+      "covers": [
+        { "photoBase": "/photos/2026-05-03-gold-coast", "file": "05" }
+      ],
+      "days": ["2026-05-03-lone-pine", "2026-05-03-gold-coast"]
+    },
+    {
+      "key": "boonah",
+      "volume": "Vol. 02",
+      "issueTitle": {
+        "en": "Australia",
+        "jp": "オーストラリア",
+        "cn": "澳大利亚"
+      },
+      "label": {
+        "en": "Chapter 03",
+        "jp": "第三章",
+        "cn": "第三章"
+      },
+      "title": {
+        "en": "Boonah",
+        "jp": "ブーナ",
+        "cn": "布纳"
+      },
+      "place": {
+        "en": "Queensland",
+        "jp": "クイーンズランド",
+        "cn": "昆士兰"
+      },
+      "lede": {
+        "en": "The fallen sun, in pieces, on the lake.",
+        "jp": "落ちた太陽が、湖の上で砕けてひらいてゆく。",
+        "cn": "落下的太阳,在湖面上碎成无数片光。"
+      },
+      "covers": [
+        { "photoBase": "/photos/2026-05-04-boonah", "file": "02" }
+      ],
+      "days": ["2026-05-04-boonah"]
+    },
+    {
+      "key": "yulong",
+      "volume": "Vol. 01",
+      "issueTitle": {
+        "en": "Yunnan",
+        "jp": "雲南",
+        "cn": "云南"
+      },
+      "placeholder": true,
+      "label": {
+        "en": "Chapter 01",
+        "jp": "第一章",
+        "cn": "第一章"
+      },
+      "title": {
+        "en": "Yulong Snow Mountain",
+        "jp": "玉龍雪山",
+        "cn": "玉龙雪山"
+      },
+      "place": {
+        "en": "Yunnan, China",
+        "jp": "中国 雲南省",
+        "cn": "中国 云南省"
+      },
+      "lede": {
+        "en": "[ to come ]",
+        "jp": "[ 準備中 ]",
+        "cn": "[ 即将到来 ]"
+      },
+      "covers": [],
+      "days": []
+    },
+    {
+      "key": "meili",
+      "volume": "Vol. 01",
+      "issueTitle": {
+        "en": "Yunnan",
+        "jp": "雲南",
+        "cn": "云南"
+      },
+      "placeholder": true,
+      "label": {
+        "en": "Chapter 02",
+        "jp": "第二章",
+        "cn": "第二章"
+      },
+      "title": {
+        "en": "Meili Snow Mountain",
+        "jp": "梅里雪山",
+        "cn": "梅里雪山"
+      },
+      "place": {
+        "en": "Yunnan, China",
+        "jp": "中国 雲南省",
+        "cn": "中国 云南省"
+      },
+      "lede": {
+        "en": "[ to come ]",
+        "jp": "[ 準備中 ]",
+        "cn": "[ 即将到来 ]"
+      },
+      "covers": [],
+      "days": []
+    }
+  ],
+  "ui": {
+    "contents": {
+      "en": "Contents",
+      "jp": "目次",
+      "cn": "目录"
+    },
+    "menu": {
+      "en": "Menu",
+      "jp": "メニュー",
+      "cn": "菜单"
+    },
+    "close": {
+      "en": "Close",
+      "jp": "閉じる",
+      "cn": "关闭"
+    },
+    "previous": {
+      "en": "Previous",
+      "jp": "前へ",
+      "cn": "上一张"
+    },
+    "next": {
+      "en": "Next",
+      "jp": "次へ",
+      "cn": "下一张"
+    },
+    "photos": {
+      "en": "Photos",
+      "jp": "撮影",
+      "cn": "摄影"
+    },
+    "location": {
+      "en": "Location",
+      "jp": "場所",
+      "cn": "地点"
+    },
+    "item": {
+      "en": "Item",
+      "jp": "番号",
+      "cn": "编号"
+    },
+    "developed": {
+      "en": "Developed",
+      "jp": "現像",
+      "cn": "冲印"
+    },
+    "nextChapter": {
+      "en": "Next chapter",
+      "jp": "次の章",
+      "cn": "下一章"
+    },
+    "backToContents": {
+      "en": "Back to contents",
+      "jp": "目次へ戻る",
+      "cn": "回到目录"
+    },
+    "calendar": {
+      "en": "Calendar",
+      "jp": "カレンダー",
+      "cn": "日历"
+    },
+    "comingSoon": {
+      "en": "Coming soon",
+      "jp": "準備中",
+      "cn": "即将到来"
+    }
+  },
+  "calendar": [
+    {
+      "year": 2025,
+      "month": 12,
+      "marks": [
+        { "day": 27, "chapterKey": "yulong" },
+        { "day": 28, "chapterKey": "yulong" },
+        { "day": 29, "chapterKey": "yulong" },
+        { "day": 30, "chapterKey": "yulong" },
+        { "day": 31, "chapterKey": "yulong" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "marks": [
+        { "day": 1, "chapterKey": "meili" },
+        { "day": 2, "chapterKey": "meili" },
+        { "day": 3, "chapterKey": "meili" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "marks": [
+        { "day": 30, "chapterKey": "sydney" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "marks": [
+        { "day": 1, "chapterKey": "sydney" },
+        { "day": 3, "chapterKey": "queensland" },
+        { "day": 4, "chapterKey": "boonah" }
+      ]
+    }
+  ],
+  "colophon": {
+    "en": "cyanotype · Vol. 02 — Australia · May 2026",
+    "jp": "cyanotype · Vol. 02 — オーストラリア · 二〇二六年五月",
+    "cn": "cyanotype · Vol. 02 — 澳大利亚 · 二〇二六年五月"
+  }
+}

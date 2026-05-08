@@ -1,0 +1,97 @@
+{
+  "id": "2026-05-03-gold-coast",
+  "chapter": "queensland",
+  "dayLabel": "Day 02",
+  "title": {
+    "en": "Miami Beach",
+    "jp": "マイアミビーチ",
+    "cn": "迈阿密海滩"
+  },
+  "location": {
+    "en": "Gold Coast, QLD",
+    "jp": "ゴールドコースト, QLD",
+    "cn": "黄金海岸, QLD"
+  },
+  "place": {
+    "en": "Miami Beach, Gold Coast",
+    "jp": "マイアミビーチ、ゴールドコースト",
+    "cn": "迈阿密海滩，黄金海岸"
+  },
+  "date": "5.3.2026",
+  "timeOfDay": {
+    "en": "Afternoon",
+    "jp": "午後",
+    "cn": "午后"
+  },
+  "essay": [
+    { "kind": "lede-first", "text": {
+      "en": "A first walk: from the far end of Miami Beach, all the way to the centre.",
+      "jp": "はじめての散歩。マイアミビーチの端から、中心まで。",
+      "cn": "第一次散步：从迈阿密海滩的尽头，一路走到中心。"
+    }},
+    { "kind": "body", "text": {
+      "en": "The light was kind. The people looked happy.",
+      "jp": "光はやさしく、人々はうれしそうだった。",
+      "cn": "光是温柔的。人们看上去很幸福。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Sunlight on water, the smell of salt, dogs led at the heels of their owners, runners passing through. A few of us — travellers — threading among them.",
+      "jp": "水の上の陽射し、潮の匂い、飼い主の足元を歩く犬たち、走り抜けてゆく人々。わたしたち何人か——旅人——もまた、そのあいだを縫って歩いた。",
+      "cn": "水面的阳光，海盐的气息，跟在主人脚边的狗，跑步而过的人。我们几人——旅人——在他们之间穿行。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Moment folding into moment. Lives brushing, briefly, against lives.",
+      "jp": "瞬間が、瞬間に折り重なってゆく。命が、つかの間、別の命に触れてゆく。",
+      "cn": "一刻叠着一刻。生命，与另一段生命，短暂地相擦。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "An hour that felt like a gift. I thought, a month. I could give a month to this place.",
+      "jp": "贈りもののような一時間。一か月——この街には、一か月を捧げてもいいと思った。",
+      "cn": "像被赠予的一小时。我想——一个月。我愿把一个月，留在这里。"
+    }}
+  ],
+  "credits": {
+    "photographer": "みんみん",
+    "film": "cyanotype 3030",
+    "camera": "Sony α7 III",
+    "developed": "5.4.2026"
+  },
+  "photoBase": "/photos/2026-05-03-gold-coast",
+  "photos": [
+    { "file": "01", "caption": {
+      "en": "The headland, far and quiet.",
+      "jp": "岬は、遠く、静かに。",
+      "cn": "海岬，遥远而宁静。"
+    }},
+    { "file": "02", "caption": {
+      "en": "Two on the cliff edge.",
+      "jp": "崖の縁に、ふたり。",
+      "cn": "崖边，两个人。"
+    }},
+    { "file": "03", "caption": {
+      "en": "A couple, framed by their photographer.",
+      "jp": "写真家のレンズに、収まる二人。",
+      "cn": "一对恋人，被他们的摄影师收入框中。"
+    }},
+    { "file": "04", "caption": {
+      "en": "A handstand against the surf.",
+      "jp": "波を背に、逆立ちする人。",
+      "cn": "浪声里的，倒立。"
+    }},
+    { "file": "05", "caption": {
+      "en": "Skyline through sea mist.",
+      "jp": "海霧の向こうに、街の影。",
+      "cn": "海雾之中，城市的轮廓。"
+    }},
+    { "file": "06", "caption": {
+      "en": "A figure, a cloud.",
+      "jp": "ひとつの人影と、ひとつの雲。",
+      "cn": "一人，一云。"
+    }},
+    { "file": "07", "caption": {
+      "en": "Evening shoreline.",
+      "jp": "夕暮れの渚。",
+      "cn": "黄昏的海岸线。"
+    }}
+  ]
+}
