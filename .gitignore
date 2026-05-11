@@ -4,5 +4,26 @@ dist
 *.local
 .vite
 
+# Env (none today, but keep secrets out by default)
+.env
+.env.local
+.env.*.local
+
+# Vercel CLI artifacts (contains project + token info)
+.vercel
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# Editor
+.vscode/
+.idea/
+
 # Original RAW photos — kept locally, not pushed to GitHub
 public/photos/**/originals/
