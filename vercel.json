@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "BASE_PATH=/ npm run build && npx playwright install chromium && BASE_PATH=/ node scripts/screenshots.mjs",
+  "buildCommand": "BASE_PATH=/ npm run build",
   "outputDirectory": "dist",
   "trailingSlash": true
 }

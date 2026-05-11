@@ -126,6 +126,36 @@ export function Calendar({ months, label }) {
     return () => el.removeEventListener('scroll', onScroll);
   }, [isPhone, months.length]);
 
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el || !isPhone) return;
+    let startX = 0;
+    let startY = 0;
+    let lockedHorizontal = false;
+    const onStart = (e: TouchEvent) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      lockedHorizontal = false;
+    };
+    const onMove = (e: TouchEvent) => {
+      const dx = e.touches[0].clientX - startX;
+      const dy = e.touches[0].clientY - startY;
+      if (!lockedHorizontal && Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 6) {
+        // user is clearly swiping vertically — swallow it so the
+        // page itself doesn't scroll while they're inside the carousel.
+        e.preventDefault();
+      } else if (Math.abs(dx) > Math.abs(dy)) {
+        lockedHorizontal = true;
+      }
+    };
+    el.addEventListener('touchstart', onStart, { passive: true });
+    el.addEventListener('touchmove', onMove, { passive: false });
+    return () => {
+      el.removeEventListener('touchstart', onStart);
+      el.removeEventListener('touchmove', onMove);
+    };
+  }, [isPhone]);
+
   const goTo = (i: number) => {
     const el = scrollerRef.current;
     if (!el) return;

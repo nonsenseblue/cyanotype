@@ -147,7 +147,7 @@ export function Index({ issue }) {
 
       <HandRule variant="bottom" />
 
-      <p className="issue-colophon">{t(issue.colophon)}</p>
+      <p className="issue-colophon">{t(issue.homeColophon)}</p>
 
     </article>
   );

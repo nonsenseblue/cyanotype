@@ -81,6 +81,12 @@ export function SiteHeader({ issue, currentKey }) {
       </div>
 
       {menuOpen && (
+        <>
+          <div
+            className="site-drawer-overlay"
+            onClick={() => setMenuOpen(false)}
+            aria-hidden="true"
+          />
         <nav className="site-drawer" aria-label="Menu">
           <Link
             to="/"
@@ -102,7 +108,20 @@ export function SiteHeader({ issue, currentKey }) {
               </Link>
             ))}
           <LangSwitcher extraClass="site-lang--drawer" />
+          <svg
+            className="site-drawer-postmark"
+            viewBox="0 0 80 80"
+            aria-hidden="true"
+          >
+            <circle cx="40" cy="40" r="34" fill="none" stroke="currentColor" strokeWidth="0.7" />
+            <circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" strokeWidth="0.5" />
+            <text x="40" y="33" textAnchor="middle" fontSize="5.4" letterSpacing="0.6">CYANOTYPE</text>
+            <line x1="20" y1="40" x2="28" y2="40" stroke="currentColor" strokeWidth="0.45" />
+            <line x1="52" y1="40" x2="60" y2="40" stroke="currentColor" strokeWidth="0.45" />
+            <text x="40" y="50" textAnchor="middle" fontSize="6.4" letterSpacing="0.4">2026 · 5</text>
+          </svg>
         </nav>
+        </>
       )}
 
     </header>
