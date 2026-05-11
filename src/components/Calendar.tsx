@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
 import { useLang, useT } from '../contexts/LanguageContext';
@@ -71,18 +72,109 @@ function MiniCalendar({ year, month, marks }) {
   );
 }
 
+function NavArrow({ direction }: { direction: 'left' | 'right' }) {
+  return (
+    <svg
+      viewBox="0 0 36 14"
+      className={`calendar-nav-arrow calendar-nav-arrow--${direction}`}
+      aria-hidden="true"
+    >
+      <path
+        d="M2,7 C8,5 18,9 32,7"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M26,2 C29,4 31,6 32,7 C31,8 29,10 26,12"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function Calendar({ months, label }) {
   const t = useT();
   const ref = useReveal();
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
+  const [active, setActive] = useState(0);
+  const [isPhone, setIsPhone] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 640px)');
+    const apply = () => setIsPhone(mq.matches);
+    apply();
+    mq.addEventListener('change', apply);
+    return () => mq.removeEventListener('change', apply);
+  }, []);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el || !isPhone) return;
+    const onScroll = () => {
+      const w = el.clientWidth;
+      if (w === 0) return;
+      const i = Math.round(el.scrollLeft / w);
+      setActive(Math.max(0, Math.min(months.length - 1, i)));
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, [isPhone, months.length]);
+
+  const goTo = (i: number) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const target = Math.max(0, Math.min(months.length - 1, i));
+    el.scrollTo({ left: el.clientWidth * target, behavior: 'smooth' });
+  };
+
   if (!months || months.length === 0) return null;
+
   return (
     <section className="calendar reveal" ref={ref} aria-label="Calendar">
       <p className="calendar-heading">{t(label)}</p>
-      <div className="calendar-grid">
-        {months.map((m) => (
-          <MiniCalendar key={`${m.year}-${m.month}`} {...m} />
-        ))}
+      <div className="calendar-viewport">
+        <div className="calendar-grid" ref={scrollerRef}>
+          {months.map((m) => (
+            <MiniCalendar key={`${m.year}-${m.month}`} {...m} />
+          ))}
+        </div>
       </div>
+      {isPhone && months.length > 1 && (
+        <div className="calendar-nav">
+          <button
+            type="button"
+            className="calendar-nav-btn"
+            onClick={() => goTo(active - 1)}
+            disabled={active === 0}
+            aria-label="Previous month"
+          >
+            <NavArrow direction="left" />
+          </button>
+          <div className="calendar-nav-dots" aria-hidden="true">
+            {months.map((_, i) => (
+              <span
+                key={i}
+                className={`calendar-nav-dot${i === active ? ' is-active' : ''}`}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className="calendar-nav-btn"
+            onClick={() => goTo(active + 1)}
+            disabled={active === months.length - 1}
+            aria-label="Next month"
+          >
+            <NavArrow direction="right" />
+          </button>
+        </div>
+      )}
     </section>
   );
 }
