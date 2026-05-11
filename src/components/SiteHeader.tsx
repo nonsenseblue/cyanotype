@@ -2,6 +2,26 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLang, useT, LANGUAGES } from '../contexts/LanguageContext';
 
+function DrawerStar() {
+  return (
+    <svg
+      className="drawer-divider-star"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        d="M12,4 C13,9 14,10 18,11 C14,12 13,13 12,18 C11,13 10,12 6,11 C10,10 11,9 12,4 Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        vectorEffect="non-scaling-stroke"
+      />
+    </svg>
+  );
+}
+
 function LangSwitcher({ extraClass = '' }) {
   const { lang, setLang } = useLang();
   return (
@@ -64,12 +84,35 @@ export function SiteHeader({ issue, currentKey }) {
 
         <Link to="/" className="site-brand">{issue.brand}</Link>
 
+        <Link
+          to="/about"
+          className={`site-about-link${currentKey === 'about' ? ' is-current' : ''}`}
+        >
+          <svg
+            className="site-about-circle"
+            viewBox="0 0 80 60"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path
+              pathLength="100"
+              d="M16,30 C10,16 26,6 42,7 C61,8 76,17 73,32 C70,47 51,55 33,51 C16,47 5,42 16,30 Z"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <span className="site-about-label">About</span>
+        </Link>
+
         <LangSwitcher extraClass="site-lang--desktop" />
 
         <button
           type="button"
           className={`site-burger${menuOpen ? ' is-open' : ''}`}
-          aria-label={menuOpen ? t(issue.ui.close) : t(issue.ui.menu)}
+          aria-label={menuOpen ? 'Close' : 'Menu'}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((v) => !v)}
         >
@@ -87,40 +130,51 @@ export function SiteHeader({ issue, currentKey }) {
             onClick={() => setMenuOpen(false)}
             aria-hidden="true"
           />
-        <nav className="site-drawer" aria-label="Menu">
-          <Link
-            to="/"
-            className={`site-drawer-link${currentKey === null ? ' is-current' : ''}`}
-            onClick={() => setMenuOpen(false)}
-          >
-            {t(issue.ui.contents)}
-          </Link>
-          {issue.chapters
-            .filter((c) => !c.placeholder)
-            .map((c) => (
+          <nav className="site-drawer" aria-label="Menu">
+            <Link
+              to="/"
+              className={`drawer-link drawer-link--home${currentKey === null ? ' is-current' : ''}`}
+              onClick={() => setMenuOpen(false)}
+            >
+              Contents
+            </Link>
+
+            {issue.volumes.map((vol) => {
+              const volChapters = issue.chapters.filter(
+                (c) => !c.placeholder && c.volume === vol.volume,
+              );
+              if (volChapters.length === 0) return null;
+              return (
+                <section className="drawer-vol" key={vol.volume}>
+                  <p className="drawer-vol-label">
+                    {vol.volume} — {t(vol.title)}
+                  </p>
+                  {volChapters.map((c) => (
+                    <Link
+                      key={c.key}
+                      to={`/${c.key}`}
+                      className={`drawer-link${currentKey === c.key ? ' is-current' : ''}`}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {t(c.title)}
+                    </Link>
+                  ))}
+                </section>
+              );
+            })}
+
+            <div className="drawer-footer">
               <Link
-                key={c.key}
-                to={`/${c.key}`}
-                className={`site-drawer-link${currentKey === c.key ? ' is-current' : ''}`}
+                to="/about"
+                className={`drawer-link drawer-link--about${currentKey === 'about' ? ' is-current' : ''}`}
                 onClick={() => setMenuOpen(false)}
               >
-                {t(c.title)}
+                About
               </Link>
-            ))}
-          <LangSwitcher extraClass="site-lang--drawer" />
-          <svg
-            className="site-drawer-postmark"
-            viewBox="0 0 80 80"
-            aria-hidden="true"
-          >
-            <circle cx="40" cy="40" r="34" fill="none" stroke="currentColor" strokeWidth="0.7" />
-            <circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" strokeWidth="0.5" />
-            <text x="40" y="33" textAnchor="middle" fontSize="5.4" letterSpacing="0.6">CYANOTYPE</text>
-            <line x1="20" y1="40" x2="28" y2="40" stroke="currentColor" strokeWidth="0.45" />
-            <line x1="52" y1="40" x2="60" y2="40" stroke="currentColor" strokeWidth="0.45" />
-            <text x="40" y="50" textAnchor="middle" fontSize="6.4" letterSpacing="0.4">2026 · 5</text>
-          </svg>
-        </nav>
+              <DrawerStar />
+              <LangSwitcher extraClass="site-lang--drawer" />
+            </div>
+          </nav>
         </>
       )}
 

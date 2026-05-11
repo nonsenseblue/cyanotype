@@ -17,9 +17,8 @@ import { join, extname } from "path";
 const DIST = "dist";
 const OUT = join(DIST, "screenshots");
 const PORT = 4099;
-// Match the build's base path. GitHub Pages default = "/cyanotype/",
-// Vercel sets BASE_PATH=/ so this resolves to "" (root).
-const BASE = (process.env.BASE_PATH ?? "/cyanotype/").replace(/\/$/, "");
+// Base path is "/" (root). BASE_PATH override kept for ad-hoc local runs.
+const BASE = (process.env.BASE_PATH ?? "/").replace(/\/$/, "");
 
 const PAGES = [
   { name: "home", path: "/" },

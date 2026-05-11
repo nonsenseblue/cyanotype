@@ -1,0 +1,57 @@
+{
+  "id": "2026-01-01-meili",
+  "chapter": "meili",
+  "dayLabel": "Day 02",
+  "title": {
+    "en": "Meili Snow Mountain",
+    "jp": "梅里雪山",
+    "cn": "梅里雪山"
+  },
+  "location": {
+    "en": "Deqin, Yunnan",
+    "jp": "徳欽, 雲南省",
+    "cn": "德钦, 云南省"
+  },
+  "place": {
+    "en": "Meili Snow Mountain, Deqin",
+    "jp": "梅里雪山、徳欽",
+    "cn": "梅里雪山，德钦"
+  },
+  "date": "1.1.2026",
+  "timeOfDay": {
+    "en": "",
+    "jp": "",
+    "cn": ""
+  },
+  "essay": [
+    { "kind": "lede-first", "text": {
+      "en": "The first day of the new year.",
+      "jp": "新年の、最初の一日。",
+      "cn": "新年第一天。"
+    }},
+    { "kind": "body", "text": {
+      "en": "I saw the moon silver the peaks, and the dawn turn them to gold.",
+      "jp": "月が山々を銀に染め、朝日がそれを金に変えていくのを、見た。",
+      "cn": "见到了月照银山与日照金山。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "Pale moonlight, the rising sun, morning mist — all settling over this mountain.",
+      "jp": "白く冴える月のひかり、昇る太陽、そして朝霧。すべてが、この山の上に、降りていた。",
+      "cn": "皎洁的月光，朝阳与晨雾，笼罩在这座山之上。"
+    }}
+  ],
+  "credits": {
+    "photographer": "みんみん",
+    "film": "cyanotype 3030",
+    "camera": "Sony α7 III",
+    "developed": "1.2.2026"
+  },
+  "photoBase": "/photos/2026-01-01-meili",
+  "photos": [
+    { "file": "01", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "02", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "03", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "04", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "05", "caption": { "en": "—", "jp": "—", "cn": "—" } }
+  ]
+}

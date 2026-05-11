@@ -1,0 +1,57 @@
+{
+  "id": "2025-12-30-meili",
+  "chapter": "meili",
+  "dayLabel": "Day 01",
+  "title": {
+    "en": "Meili Snow Mountain",
+    "jp": "梅里雪山",
+    "cn": "梅里雪山"
+  },
+  "location": {
+    "en": "Deqin, Yunnan",
+    "jp": "徳欽, 雲南省",
+    "cn": "德钦, 云南省"
+  },
+  "place": {
+    "en": "Meili Snow Mountain, Deqin",
+    "jp": "梅里雪山、徳欽",
+    "cn": "梅里雪山，德钦"
+  },
+  "date": "12.30.2025",
+  "timeOfDay": {
+    "en": "",
+    "jp": "",
+    "cn": ""
+  },
+  "essay": [
+    { "kind": "lede-first", "text": {
+      "en": "The sacred mountain in the locals' hearts.",
+      "jp": "土地の人々の心の中の、神の山。",
+      "cn": "当地人心里的神山。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Here we met the season's first snow. Before dawn, I ran out with a flash and made photographs whose shape I cannot name.",
+      "jp": "ここで、その冬の初雪に出会った。夜明け前、ストロボを抱えて駆け出していき、なんとも名づけようのない写真を、いくつか撮った。",
+      "cn": "在这里遇到了初雪，凌晨奔跑出去带着闪光灯拍了一些不知名状的照片。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "Perhaps only the wish to hold this moment, before it left.",
+      "jp": "ただ、この瞬間を、留めておきたかった——そんな気持ちだけだったのかもしれない。",
+      "cn": "或许只是一种想要留住当下的感觉吧。"
+    }}
+  ],
+  "credits": {
+    "photographer": "みんみん",
+    "film": "cyanotype 3030",
+    "camera": "Sony α7 III",
+    "developed": "12.31.2025"
+  },
+  "photoBase": "/photos/2025-12-30-meili",
+  "photos": [
+    { "file": "01", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "02", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "03", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "04", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "05", "caption": { "en": "—", "jp": "—", "cn": "—" } }
+  ]
+}

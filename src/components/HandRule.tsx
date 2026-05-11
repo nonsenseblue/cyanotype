@@ -14,7 +14,7 @@ export function HandRule({ variant = '' }) {
           d="M3,9 C28,4 52,11 78,7 C104,3 130,11 156,7 C182,3 210,10 237,6"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.1"
+          strokeWidth="1.2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />

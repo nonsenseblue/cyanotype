@@ -25,5 +25,9 @@ yarn-error.log*
 .vscode/
 .idea/
 
-# Original RAW photos — kept locally, not pushed to GitHub
+# Photos live in Cloudflare R2 — keep all local copies out of git.
+# originals: source files (locally only)
+# large/thumbs: derived for upload, served from R2 in production
 public/photos/**/originals/
+public/photos/**/large/
+public/photos/**/thumbs/

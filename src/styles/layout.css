@@ -77,6 +77,66 @@ html[lang="zh-Hans"] .site-contents-link {
 
 .site-contents-link { flex-shrink: 0; }
 
+.site-about-link {
+  position: relative;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-left: auto;
+  padding: 4px 4px;
+  transition: color 0.2s ease;
+}
+.site-about-label { position: relative; z-index: 1; }
+.site-about-link:hover { color: var(--kodak-blue); }
+.site-about-link.is-current { color: var(--kodak-blue); }
+
+/* Hand-drawn brush ellipse — same idiom as the language buttons. */
+.site-about-circle {
+  position: absolute;
+  top: -8px;
+  left: -14px;
+  width: calc(100% + 28px);
+  height: calc(100% + 18px);
+  pointer-events: none;
+  overflow: visible;
+  transform: rotate(-2deg);
+}
+.site-about-circle path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0;
+  transition:
+    stroke-dashoffset 0.7s cubic-bezier(0.65, 0.05, 0.35, 1),
+    opacity 0.18s ease;
+}
+.site-about-link:hover .site-about-circle path {
+  opacity: 0.85;
+  stroke-dashoffset: 0;
+}
+.site-about-link.is-current .site-about-circle path {
+  opacity: 1;
+  stroke-dashoffset: 0;
+  transition:
+    stroke-dashoffset 0.9s cubic-bezier(0.65, 0.05, 0.35, 1),
+    opacity 0.18s ease;
+}
+
+html[lang="ja"] .site-about-link,
+html[lang="zh-Hans"] .site-about-link {
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: none;
+}
+
+@media (max-width: 720px) {
+  /* The drawer covers the About link on phones, so hide it from the
+     site header to keep things tidy. */
+  .site-about-link { display: none; }
+}
+
 /* Burger button (hidden on desktop, visible on SP) */
 
 .site-burger {
@@ -108,11 +168,10 @@ html[lang="zh-Hans"] .site-contents-link {
 .site-burger.is-open {
   /* When the drawer is open, lock the close × to the drawer's
      top-right corner so it travels with the drawer instead of
-     staying anchored in the header. Offset inwards so it sits
-     comfortably inside the perforated edge, not glued to it. */
+     staying anchored in the header. */
   position: fixed;
   top: 78px;
-  right: max(34px, calc(50vw - 154px));
+  right: max(28px, calc(50vw - 144px));
   z-index: 120;
 }
 .site-burger.is-open span:nth-child(1) {
@@ -148,36 +207,22 @@ html[lang="zh-Hans"] .site-contents-link {
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 28px);
-  max-width: 364px; /* 14 * 26 — divisible by --perf-pitch so the perforation lines up symmetrically on left/right */
-  background: #ffffff;
+  max-width: 320px;
+  background: var(--paper);
+  color: var(--ink);
   z-index: 90;
-  padding: 32px 28px 26px;
+  padding: 22px 18px 22px;
   display: flex;
   flex-direction: column;
   gap: 0;
   animation: drawer-in 0.22s ease-out;
   overflow-y: auto;
   max-height: calc(100vh - 88px);
-  /* Postage-stamp perforated edge: punch a row of half-circles
-     out of all four sides via CSS mask. */
-  --perf-r: 5px;
-  --perf-pitch: 14px;
-  -webkit-mask:
-    radial-gradient(var(--perf-r) at var(--perf-r) var(--perf-r), #0000 99%, #000)
-      calc(-1 * var(--perf-r)) calc(-1 * var(--perf-r)) / var(--perf-pitch) var(--perf-pitch),
-    linear-gradient(#000, #000) no-repeat
-      var(--perf-pitch) var(--perf-pitch)
-      / calc(100% - 2 * var(--perf-pitch)) calc(100% - 2 * var(--perf-pitch));
-  mask:
-    radial-gradient(var(--perf-r) at var(--perf-r) var(--perf-r), #0000 99%, #000)
-      calc(-1 * var(--perf-r)) calc(-1 * var(--perf-r)) / var(--perf-pitch) var(--perf-pitch),
-    linear-gradient(#000, #000) no-repeat
-      var(--perf-pitch) var(--perf-pitch)
-      / calc(100% - 2 * var(--perf-pitch)) calc(100% - 2 * var(--perf-pitch));
-  filter:
-    drop-shadow(0 1px 1px rgba(10, 28, 56, 0.22))
-    drop-shadow(0 8px 22px rgba(10, 28, 56, 0.25));
+  box-shadow:
+    0 1px 1px rgba(10, 28, 56, 0.22),
+    0 8px 22px rgba(10, 28, 56, 0.25);
 }
+
 
 @keyframes drawer-in {
   from { opacity: 0; transform: translate(-50%, -6px); }
@@ -223,6 +268,302 @@ html[lang="zh-Hans"] .site-contents-link {
   font-family: "Inter", sans-serif;
   font-weight: 500;
 }
+
+/* ---------- Drawer contents (simple text list) ---------- */
+
+.drawer-link {
+  display: block;
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  padding: 7px 2px;
+}
+.drawer-link.is-current { color: var(--kodak-blue); }
+
+.drawer-link--home {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--kodak-blue);
+  padding: 2px 2px 16px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.drawer-vol {
+  margin-top: 22px;
+}
+.drawer-vol:first-of-type { margin-top: 18px; }
+
+.drawer-vol-label {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 4px;
+  padding-left: 2px;
+}
+
+/* Footer row in the drawer: About · star · language switcher,
+   sitting on one line beneath a thin rule. */
+.drawer-footer {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.drawer-footer > * { flex-shrink: 0; }
+.drawer-footer .site-lang--drawer .site-lang-sep { margin: 0 0.5em; }
+
+.drawer-link--about {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  margin: 0;
+  padding: 2px;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--kodak-blue);
+  text-align: left;
+  flex-shrink: 0;
+}
+
+/* Hand-drawn star dividing About from the language switcher. */
+.drawer-divider-star {
+  display: block;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  color: var(--kodak-blue);
+  opacity: 0.6;
+  overflow: visible;
+}
+
+html[lang="ja"] .drawer-link,
+html[lang="zh-Hans"] .drawer-link {
+  font-style: normal;
+  font-size: 13px;
+}
+html[lang="ja"] .drawer-link--home,
+html[lang="zh-Hans"] .drawer-link--home,
+html[lang="ja"] .drawer-link--about,
+html[lang="zh-Hans"] .drawer-link--about {
+  font-size: 12px;
+}
+
+.site-lang--drawer {
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  border: none;
+  justify-content: center;
+}
+.site-lang--drawer .site-lang-btn {
+  font-size: 9px;
+  padding: 4px 3px;
+}
+.site-lang--drawer .site-lang-circle {
+  top: -3px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 6px);
+}
+.site-lang--drawer .site-lang-sep { margin: 0 0.6em; }
+
+/* Home → About entry point, between the bottom HandRule and the colophon. */
+.home-about-cta {
+  text-align: center;
+  margin: clamp(36px, 5vw, 64px) auto clamp(20px, 3vw, 32px);
+}
+
+.home-about-link {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--kodak-blue);
+  text-decoration: none;
+  padding: 4px 6px;
+  transition: color 0.2s ease;
+}
+.home-about-label { position: relative; z-index: 1; }
+
+html[lang="ja"] .home-about-link,
+html[lang="zh-Hans"] .home-about-link {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: none;
+}
+
+/* Hand-drawn brush ellipse — appears on hover, same idiom as the
+   header About link and the language buttons. */
+.home-about-circle {
+  position: absolute;
+  top: -6px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 14px);
+  pointer-events: none;
+  overflow: visible;
+  color: var(--kodak-blue);
+  transform: rotate(-2deg);
+}
+.home-about-circle path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0;
+  transition:
+    stroke-dashoffset 0.7s cubic-bezier(0.65, 0.05, 0.35, 1),
+    opacity 0.18s ease;
+}
+.home-about-link:hover .home-about-circle path {
+  opacity: 0.85;
+  stroke-dashoffset: 0;
+}
+
+/* Small hand-drawn star between the About link and the colophon. */
+.home-about-star {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: clamp(20px, 2.4vw, 32px) auto clamp(10px, 1.4vw, 18px);
+  color: var(--kodak-blue);
+  opacity: 0.55;
+  overflow: visible;
+}
+
+/* ---------- About page ---------- */
+
+.about-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(20px, 4vw, 60px) clamp(20px, 4vw, 40px) clamp(60px, 8vw, 120px);
+}
+
+.about-portrait {
+  display: block;
+  width: clamp(140px, 18vw, 200px);
+  height: clamp(140px, 18vw, 200px);
+  margin: 0 auto clamp(20px, 2.6vw, 32px);
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(29, 58, 107, 0.12), 0 8px 24px rgba(20, 18, 14, 0.08);
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.about-masthead {
+  position: relative;
+  text-align: center;
+  margin-bottom: clamp(36px, 5vw, 64px);
+  padding: clamp(20px, 3vw, 40px) clamp(24px, 4vw, 48px) clamp(8px, 1.2vw, 14px);
+}
+
+.about-title {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(28px, 4vw, 46px);
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.about-star {
+  position: absolute;
+  width: clamp(18px, 2vw, 28px);
+  height: clamp(18px, 2vw, 28px);
+  color: var(--kodak-blue);
+  opacity: 0.65;
+  overflow: visible;
+}
+.about-star--left { top: 16%; left: 14%; transform: rotate(-12deg); }
+.about-star--right { top: 6%; right: 16%; transform: rotate(14deg); }
+@media (max-width: 720px) {
+  .about-star--left { top: 0; left: 4%; }
+  .about-star--right { top: 0; right: 4%; }
+}
+
+.about-underline {
+  display: block;
+  width: clamp(100px, 16vw, 200px);
+  height: 8px;
+  margin: clamp(12px, 1.8vw, 22px) auto 0;
+  color: var(--kodak-blue);
+  opacity: 0.55;
+  overflow: visible;
+}
+
+.about-camera {
+  display: block;
+  width: clamp(40px, 5vw, 64px);
+  height: auto;
+  margin: clamp(24px, 3.6vw, 48px) auto clamp(14px, 2vw, 24px);
+  color: var(--kodak-blue);
+  opacity: 0.55;
+  overflow: visible;
+}
+
+.about-body {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.85;
+  color: var(--ink);
+  text-align: center;
+}
+
+.about-body p {
+  margin: 0 0 clamp(14px, 1.6vw, 22px);
+}
+
+.about-contact {
+  list-style: none;
+  padding: 0;
+  margin: clamp(20px, 2.4vw, 32px) auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.about-contact a {
+  color: var(--kodak-blue);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+}
+.about-contact a:hover { opacity: 0.7; }
 
 html[lang="ja"] .site-drawer-link,
 html[lang="zh-Hans"] .site-drawer-link {
@@ -901,15 +1242,6 @@ html[lang="zh-Hans"] .mini-cal-header {
   .site-lang--drawer { display: none; }
 }
 
-.site-lang--drawer {
-  margin-top: clamp(28px, 4vw, 40px);
-  padding-top: clamp(20px, 3vw, 28px);
-  border-top: 1px solid var(--rule);
-  font-size: 12px;
-  letter-spacing: 0.24em;
-  justify-content: flex-start;
-}
-
 /* ============================================================
    Home — hero (statement) + Vol section + chapter grid
    ============================================================ */
@@ -942,6 +1274,22 @@ html[lang="zh-Hans"] .mini-cal-header {
 }
 
 /* Pen-drawn entrance — line draws itself once it scrolls into view */
+/* Keep every hand-drawn line the same visible thickness no matter how the
+   parent SVG is scaled. Without this, a viewBox=60×30 mark and a
+   viewBox=60×60 mark drawn at the same width render with subtly different
+   stroke weights. */
+.chapter-mark path,
+.chapter-mark circle,
+.chapter-mark ellipse,
+.chapter-decor path,
+.hero-mark path,
+.hero-mark circle,
+.hero-mark ellipse,
+.hand-rule path,
+.chapter-next-arrow path {
+  vector-effect: non-scaling-stroke;
+}
+
 .hand-rule path {
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
@@ -981,8 +1329,11 @@ html[lang="zh-Hans"] .mini-cal-header {
 .hero-mark path,
 .hero-mark circle,
 .hero-mark ellipse {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
+  /* Large enough to cover any hero-mark's path length once strokes are
+     scale-independent via vector-effect: non-scaling-stroke. The previous
+     200 left the camera body half-drawn. */
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
 }
 
 .hero.is-visible .hero-mark {
@@ -1003,31 +1354,36 @@ html[lang="zh-Hans"] .mini-cal-header {
   /* small star — left of intro, upper */
   top: 64%; left: 12%;
   width: clamp(20px, 2vw, 30px); height: clamp(20px, 2vw, 30px);
-  transform: rotate(15deg);
+  --rot: 15deg;
+  transform: rotate(var(--rot));
 }
 .hero-mark-3 {
   /* medium star — right of intro, upper */
   top: 64%; right: 12%;
   width: clamp(24px, 2.4vw, 34px); height: clamp(24px, 2.4vw, 34px);
-  transform: rotate(-18deg);
+  --rot: -18deg;
+  transform: rotate(var(--rot));
 }
 .hero-mark-4 {
   /* crescent moon — left of intro, lower */
   top: 76%; left: 20%;
   width: clamp(26px, 4.4vw, 70px); height: clamp(26px, 4.4vw, 70px);
-  transform: rotate(14deg);
+  --rot: 14deg;
+  transform: rotate(var(--rot));
 }
 .hero-mark-5 {
   /* camera — right of intro, lower */
   top: 74%; right: 18%;
   width: clamp(32px, 5.4vw, 84px); height: clamp(28px, 4.8vw, 74px);
-  transform: rotate(-6deg);
+  --rot: -6deg;
+  transform: rotate(var(--rot));
 }
 .hero-mark-6 {
   /* tiny star — below intro, centred */
   top: 90%; left: 50%;
   width: clamp(14px, 1.4vw, 20px); height: clamp(14px, 1.4vw, 20px);
-  transform: translateX(-50%) rotate(8deg);
+  --rot: 8deg;
+  transform: translateX(-50%) rotate(var(--rot));
 }
 
 @media (max-width: 720px) {
@@ -1041,7 +1397,9 @@ html[lang="zh-Hans"] .mini-cal-header {
     top: 20%; right: 8%;
     width: 32px; height: 28px;
   }
-  .hero-mark-6 { top: 14%; }
+  /* On phones the tagline runs through the middle of .hero, so move the
+     centred punctuation star below the intro instead of above the tagline. */
+  .hero-mark-6 { top: auto; bottom: 4%; }
 }
 
 /* Stagger the strokes so they appear drawn one after another, not in sync */
@@ -1184,9 +1542,14 @@ html[lang="zh-Hans"] .vol-section-subtitle {
   margin-top: clamp(8px, 2vw, 32px);
 }
 
+/* Breathing room between consecutive volumes (Vol. 01 → Vol. 02 etc). */
+.vol-section + .vol-section {
+  margin-top: clamp(72px, 9vw, 140px);
+}
+
 .vol-section-header {
   text-align: center;
-  margin-bottom: clamp(48px, 6vw, 88px);
+  margin-bottom: clamp(32px, 4vw, 56px);
 }
 
 .vol-section-volume {
@@ -1201,11 +1564,11 @@ html[lang="zh-Hans"] .vol-section-subtitle {
 .vol-section-title {
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(24px, 3.6vw, 44px);
+  font-size: clamp(22px, 2.8vw, 34px);
   letter-spacing: -0.004em;
   line-height: 1.1;
   color: var(--ink);
-  margin-bottom: clamp(12px, 1.6vw, 18px);
+  margin-bottom: clamp(10px, 1.4vw, 16px);
 }
 
 .vol-section-subtitle {
@@ -1225,6 +1588,9 @@ html[lang="zh-Hans"] .vol-section-subtitle {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(24px, 2.8vw, 40px) clamp(18px, 2.2vw, 32px);
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 960px) {
@@ -1249,7 +1615,7 @@ html[lang="zh-Hans"] .vol-section-subtitle {
 .chapter-card-cover {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: var(--paper);
 }
@@ -1285,12 +1651,12 @@ html[lang="zh-Hans"] .vol-section-subtitle {
 .chapter-card-title {
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(22px, 2.2vw, 30px);
+  font-size: clamp(18px, 1.7vw, 24px);
   letter-spacing: -0.005em;
-  line-height: 1.15;
+  line-height: 1.2;
   color: var(--ink);
   margin: 4px 0 2px;
-  min-height: 2.3em;
+  min-height: 2.4em;
   display: flex;
   align-items: flex-start;
 }
@@ -1328,7 +1694,7 @@ html[lang="zh-Hans"] .vol-section-subtitle {
 }
 
 @media (max-width: 720px) {
-  .chapter-masthead { padding-bottom: 56px; }
+  .chapter-masthead { padding-bottom: 80px; }
 }
 
 /* Guardian marks on either side of the chapter title */
@@ -1339,25 +1705,30 @@ html[lang="zh-Hans"] .vol-section-subtitle {
   overflow: visible;
   pointer-events: none;
   display: block;
-  width: clamp(36px, 5.8vw, 88px);
+  width: clamp(36px, 4.4vw, 64px);
   height: auto;
 }
 
 /* Marks float on either side of the title, like the hero marks on the index. */
 .chapter-mark--left {
   top: 30%; left: 14%;
-  transform: rotate(-10deg);
+  --rot: -10deg;
+  transform: rotate(var(--rot));
 }
 
 .chapter-mark--right {
   top: 30%; right: 14%;
-  transform: rotate(10deg);
+  --rot: 10deg;
+  transform: rotate(var(--rot));
 }
 
 @media (max-width: 720px) {
+  /* On phones, the title is wide enough that side-flanked marks collide
+     with it. Drop the marks below the lede instead — anchored to the
+     masthead's bottom padding. */
   .chapter-mark { width: 36px; height: auto; }
-  .chapter-mark--left { top: 28%; left: 4%; }
-  .chapter-mark--right { top: 28%; right: 4%; }
+  .chapter-mark--left { top: auto; bottom: 10px; left: 8%; }
+  .chapter-mark--right { top: auto; bottom: 10px; right: 8%; }
 }
 
 /* Tiny stars — small punctuation in the masthead, never above the title */
@@ -1372,21 +1743,24 @@ html[lang="zh-Hans"] .vol-section-subtitle {
 }
 .chapter-decor--bl {
   top: 8%; left: 24%;
-  transform: rotate(14deg);
+  --rot: 14deg;
+  transform: rotate(var(--rot));
 }
 .chapter-decor--br {
   top: 6%; right: 24%;
-  transform: rotate(-10deg);
+  --rot: -10deg;
+  transform: rotate(var(--rot));
 }
 
 @media (max-width: 720px) {
-  .chapter-decor--bl { left: 16%; }
-  .chapter-decor--br { right: 16%; }
+  /* Tiny stars also drop below the lede on phones. */
+  .chapter-decor--bl { top: auto; bottom: 16px; left: 32%; }
+  .chapter-decor--br { top: auto; bottom: 20px; right: 32%; }
 }
 
 .chapter-decor path {
-  stroke-dasharray: 80;
-  stroke-dashoffset: 80;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
 }
 
 .chapter-masthead.is-visible .chapter-decor path {
@@ -1400,8 +1774,8 @@ html[lang="zh-Hans"] .vol-section-subtitle {
 .chapter-mark path,
 .chapter-mark circle,
 .chapter-mark ellipse {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
 }
 
 .chapter-masthead.is-visible .chapter-mark path,
@@ -1409,6 +1783,46 @@ html[lang="zh-Hans"] .vol-section-subtitle {
 .chapter-masthead.is-visible .chapter-mark ellipse {
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1.6s cubic-bezier(0.65, 0.05, 0.35, 1) 0.4s;
+}
+
+/* ---------- Hand-drawn marks — hover wobble (a gentle nudge) ---------- */
+
+/* The mark's resting rotation is held in --rot per mark so the wobble can
+   preserve it. Default to 0 for any mark that hasn't opted in. */
+@keyframes wobble {
+  0%   { transform: rotate(var(--rot, 0deg)) translateX(0); }
+  25%  { transform: rotate(var(--rot, 0deg)) translateX(-3px); }
+  75%  { transform: rotate(var(--rot, 0deg)) translateX(3px); }
+  100% { transform: rotate(var(--rot, 0deg)) translateX(0); }
+}
+
+/* hero-mark-6 is horizontally centred via translateX(-50%); preserve that
+   while wobbling. */
+@keyframes wobbleCenter {
+  0%, 100% { transform: translateX(-50%) rotate(var(--rot, 0deg)); }
+  25%      { transform: translateX(calc(-50% - 3px)) rotate(var(--rot, 0deg)); }
+  75%      { transform: translateX(calc(-50% + 3px)) rotate(var(--rot, 0deg)); }
+}
+
+/* hero-decor blocks pointer events for the whole layer — unlock the marks
+   themselves so they can be hovered individually. */
+.hero-decor { pointer-events: none; }
+.hero-mark { pointer-events: auto; cursor: default; }
+
+.hero.is-visible .hero-mark:hover {
+  animation: wobble 1.6s cubic-bezier(0.22, 0.6, 0.36, 1);
+}
+
+.hero.is-visible .hero-mark.hero-mark-6:hover {
+  animation: wobbleCenter 1.6s cubic-bezier(0.22, 0.6, 0.36, 1);
+}
+
+.chapter-masthead.is-visible .chapter-mark:hover {
+  animation: wobble 1.8s cubic-bezier(0.22, 0.6, 0.36, 1);
+}
+
+.chapter-masthead.is-visible .chapter-decor:hover {
+  animation: wobble 1.4s cubic-bezier(0.22, 0.6, 0.36, 1);
 }
 
 .chapter-masthead.is-visible .chapter-mark--right path,
@@ -1568,16 +1982,26 @@ html[lang="zh-Hans"] .chapter-next-title {
   width: 32px;
   height: 12px;
   overflow: visible;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .chapter-next-arrow--left { transform: scaleX(-1); }
 
+@keyframes arrowNudge {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+@keyframes arrowNudgeLeft {
+  0%   { transform: scaleX(-1) translateX(0); }
+  50%  { transform: scaleX(-1) translateX(6px); }
+  100% { transform: scaleX(-1) translateX(0); }
+}
+
 .chapter-next-link:hover .chapter-next-arrow--right {
-  transform: translateX(5px);
+  animation: arrowNudge 1.5s cubic-bezier(0.22, 0.6, 0.36, 1);
 }
 .chapter-next-link:hover .chapter-next-arrow--left {
-  transform: scaleX(-1) translateX(5px);
+  animation: arrowNudgeLeft 1.5s cubic-bezier(0.22, 0.6, 0.36, 1);
 }
 
 /* Pen-drawn entrance for the arrow */

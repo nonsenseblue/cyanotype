@@ -1,6 +1,7 @@
 import type { RouteRecord } from 'vite-react-ssg';
 import App from './App';
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
 import ChapterRoute from './pages/ChapterRoute';
 import issue from './data/issue.json';
 
@@ -10,6 +11,7 @@ export const routes: RouteRecord[] = [
     Component: App,
     children: [
       { index: true, Component: HomePage },
+      { path: 'about', Component: AboutPage },
       {
         path: ':chapterKey',
         Component: ChapterRoute,

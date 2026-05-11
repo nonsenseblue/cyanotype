@@ -47,7 +47,9 @@ export function ChapterPage({ chapter, days, issue, nextChapter, onOpenLightbox 
 
           <DotsRule />
 
-          <p className="issue-colophon">{t(issue.colophon)}</p>
+          <p className="issue-colophon">
+            cyanotype · {chapter.volume} — {t(chapter.issueTitle)}
+          </p>
         </>
       )}
 

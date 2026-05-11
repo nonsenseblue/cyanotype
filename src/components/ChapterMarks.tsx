@@ -25,7 +25,7 @@ const PATHS = {
         d="M4,30 C4,16 16,6 30,6 C44,6 56,16 56,30"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.3"
+        strokeWidth="1.2"
         strokeLinecap="round"
       />
       <path
@@ -39,7 +39,7 @@ const PATHS = {
         d="M16,30 C16,21 22,14 30,14 C38,14 44,21 44,30"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.1"
+        strokeWidth="1.2"
         strokeLinecap="round"
       />
     </g>
@@ -68,7 +68,7 @@ const PATHS = {
         d="M30,10 L22,42"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1"
+        strokeWidth="1.2"
         strokeLinecap="round"
       />
     </g>
@@ -80,7 +80,7 @@ const PATHS = {
         d="M30,4 L30,12 M30,48 L30,56 M4,30 L12,30 M48,30 L56,30 M11,11 L17,17 M43,43 L49,49 M11,49 L17,43 M43,17 L49,11"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1"
+        strokeWidth="1.2"
         strokeLinecap="round"
       />
     </g>
@@ -116,7 +116,7 @@ const PATHS = {
       <path
         d="M30,12 L26,16 M30,12 L34,16 M30,48 L26,44 M30,48 L34,44 M14,22 L18,22 M14,22 L16,18 M46,38 L42,38 M46,38 L44,42 M46,22 L42,22 M46,22 L44,18 M14,38 L18,38 M14,38 L16,42"
         stroke="currentColor"
-        strokeWidth="1"
+        strokeWidth="1.2"
         strokeLinecap="round"
       />
     </g>
@@ -151,6 +151,7 @@ const MARKS_BY_CHAPTER = {
   queensland: ['leaf', 'sun'],
   boonah: ['mountain', 'moon'],
   yulong: ['snowflake', 'mountain'],
+  shangrila: ['sun', 'leaf'],
   meili: ['snowflake', 'star'],
 };
 
@@ -177,7 +178,7 @@ function TinyStar({ position }) {
         d="M12,4 C13,9 14,10 18,11 C14,12 13,13 12,18 C11,13 10,12 6,11 C10,10 11,9 12,4 Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1"
+        strokeWidth="1.2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

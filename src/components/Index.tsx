@@ -33,7 +33,6 @@ function ChapterCard({ chapter }) {
 export function Index({ issue }) {
   const t = useT();
   const heroRef = useReveal();
-  const sectionRef = useReveal();
 
   return (
     <article className="home">
@@ -95,7 +94,7 @@ export function Index({ issue }) {
               r="3"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1"
+              strokeWidth="1.2"
             />
             <circle
               cx="48"
@@ -129,21 +128,27 @@ export function Index({ issue }) {
 
       <HandRule />
 
-      <section className="vol-section" ref={sectionRef}>
-        <header className="vol-section-header">
-          <p className="vol-section-volume">{issue.volume}</p>
-          <h2 className="vol-section-title">{t(issue.title)}</h2>
-          <p className="vol-section-subtitle">{t(issue.subtitle)}</p>
-        </header>
+      {issue.volumes.map((vol) => {
+        const volChapters = issue.chapters.filter(
+          (c) => !c.placeholder && c.volume === vol.volume,
+        );
+        if (volChapters.length === 0) return null;
+        return (
+          <section className="vol-section" key={vol.volume}>
+            <header className="vol-section-header">
+              <p className="vol-section-volume">{vol.volume}</p>
+              <h2 className="vol-section-title">{t(vol.title)}</h2>
+              <p className="vol-section-subtitle">{t(vol.subtitle)}</p>
+            </header>
 
-        <ul className="chapter-grid">
-          {issue.chapters
-            .filter((c) => !c.placeholder)
-            .map((c) => (
-              <ChapterCard key={c.key} chapter={c} />
-            ))}
-        </ul>
-      </section>
+            <ul className="chapter-grid">
+              {volChapters.map((c) => (
+                <ChapterCard key={c.key} chapter={c} />
+              ))}
+            </ul>
+          </section>
+        );
+      })}
 
       <HandRule variant="bottom" />
 
