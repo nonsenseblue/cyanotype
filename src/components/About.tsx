@@ -1,4 +1,64 @@
 import { useReveal } from '../hooks/useReveal';
+import { HandRule } from './HandRule';
+
+function PortraitDecor() {
+  return (
+    <div className="about-portrait-decor" aria-hidden="true">
+      <svg className="portrait-mark portrait-mark--star" viewBox="0 0 24 24">
+        <path
+          d="M12,4 C13,9 14,10 18,11 C14,12 13,13 12,18 C11,13 10,12 6,11 C10,10 11,9 12,4 Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+      <svg className="portrait-mark portrait-mark--moon" viewBox="0 0 60 60">
+        <path
+          d="M36,8 C26,8 18,16 16,28 C14,40 22,50 34,52 C26,46 22,38 22,30 C22,18 28,10 36,8 Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.2"
+          strokeLinejoin="round"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+      <svg className="portrait-mark portrait-mark--cat" viewBox="0 0 44 36">
+        {/* Back-view sitting cat: two triangle ears, rounded body, simple curl tail */}
+        <path
+          d="M8,34 C8,24 10,18 14,12 L18,18 L22,18 L26,12 C30,18 32,24 32,34 Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.2"
+          strokeLinejoin="round"
+          strokeLinecap="round"
+          vectorEffect="non-scaling-stroke"
+        />
+        <path
+          d="M32,30 C36,28 38,24 36,20"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+      <svg className="portrait-mark portrait-mark--ministar" viewBox="0 0 24 24">
+        <path
+          d="M12,4 C13,9 14,10 18,11 C14,12 13,13 12,18 C11,13 10,12 6,11 C10,10 11,9 12,4 Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+    </div>
+  );
+}
 
 function HandUnderline() {
   return (
@@ -90,9 +150,12 @@ export function About({ about }) {
 
   return (
     <article className="about-page" lang="en">
-      <figure className="about-portrait reveal" ref={ref}>
-        <img src="/photos/about/profile.jpg" alt="" />
-      </figure>
+      <div className="about-portrait-wrap reveal" ref={ref}>
+        <figure className="about-portrait">
+          <img src="/photos/about/profile.jpg" alt="" />
+        </figure>
+        <PortraitDecor />
+      </div>
 
       <header className="about-masthead">
         <AboutStar extraClass="about-star--left" />
@@ -129,6 +192,10 @@ export function About({ about }) {
           </ul>
         )}
       </section>
+
+      <HandRule variant="bottom" />
+
+      <p className="issue-colophon">cyanotype · 3030</p>
     </article>
   );
 }

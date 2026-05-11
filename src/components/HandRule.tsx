@@ -10,7 +10,6 @@ export function HandRule({ variant = '' }) {
     >
       <svg viewBox="0 0 240 14" preserveAspectRatio="none">
         <path
-          pathLength="100"
           d="M3,9 C28,4 52,11 78,7 C104,3 130,11 156,7 C182,3 210,10 237,6"
           fill="none"
           stroke="currentColor"
