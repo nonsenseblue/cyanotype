@@ -47,11 +47,9 @@ export function ChapterPage({ chapter, days, issue, nextChapter, onOpenLightbox 
 
           <DotsRule />
 
-          <Colophon
-            film={days[0].credits.film}
-            camera={days[0].credits.camera}
-            developed={days[0].credits.developed}
-          />
+          <p className="issue-colophon">
+            cyanotype · {chapter.volume} — {t(chapter.issueTitle)}
+          </p>
         </>
       )}
 

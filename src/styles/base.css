@@ -18,7 +18,8 @@
 
 /* per-language font stacks — pick CJK fonts native to the chosen language */
 html[lang="ja"] {
-  --font-serif: "Cormorant Garamond", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "ヒラギノ明朝 ProN", serif;
+  /* gothic for everything — drop Cormorant so latin glyphs match the kana/kanji */
+  --font-serif: "Inter", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "ヒラギノ角ゴ ProN", sans-serif;
   --font-sans: "Inter", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "ヒラギノ角ゴ ProN", sans-serif;
 }
 

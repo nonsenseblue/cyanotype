@@ -1,0 +1,66 @@
+{
+  "id": "2025-12-28-yulong",
+  "chapter": "yulong",
+  "dayLabel": "Day 02",
+  "title": {
+    "en": "Yulong Snow Mountain",
+    "jp": "玉龍雪山",
+    "cn": "玉龙雪山"
+  },
+  "location": {
+    "en": "Lijiang, Yunnan",
+    "jp": "麗江, 雲南省",
+    "cn": "丽江, 云南省"
+  },
+  "place": {
+    "en": "Yulong Snow Mountain, Lijiang",
+    "jp": "玉龍雪山、麗江",
+    "cn": "玉龙雪山，丽江"
+  },
+  "date": "12.28.2025",
+  "timeOfDay": {
+    "en": "",
+    "jp": "",
+    "cn": ""
+  },
+  "essay": [
+    { "kind": "lede-first", "text": {
+      "en": "Snow mountain — so near, and so far.",
+      "jp": "雪の山。あんなに近く、あんなに遠く。",
+      "cn": "雪山，那么近那么远。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Because the climate has warmed, Yulong holds very little snow now. Its slopes are bare.",
+      "jp": "気候が暖まってしまって、玉龍雪山にはもう、ほとんど雪が残っていない。山肌は、むき出しのままだった。",
+      "cn": "因为气候变暖，其实玉龙雪山没有那么多积雪，光秃秃的。"
+    }},
+    { "kind": "body", "text": {
+      "en": "But there I met the master who taught me how to photograph. The words he gave me have stayed — still vivid.",
+      "jp": "それでも、そこで私に写真を教えてくれた師に出会った。彼が手渡してくれた言葉は、いまも、はっきりと残っている。",
+      "cn": "但在那边遇到了教会我摄影技巧的师傅。他对我说的话，让我记忆犹新。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Photography is subtraction, not addition. Not the more the better — only enough for what you need.",
+      "jp": "写真は引き算であって、足し算ではない。多ければいいのではなく、必要なぶんで、足りる。",
+      "cn": "摄影是减法，不是加法。不是越多越好，而是满足你需求就好。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "Something opened.",
+      "jp": "目が、開いた。",
+      "cn": "醍醐灌顶。"
+    }}
+  ],
+  "credits": {
+    "photographer": "みんみん",
+    "film": "cyanotype 3030",
+    "camera": "Sony α7 III",
+    "developed": "12.29.2025"
+  },
+  "photoBase": "/photos/2025-12-28-yulong",
+  "photos": [
+    { "file": "01", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "02", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "03", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "04", "caption": { "en": "—", "jp": "—", "cn": "—" } }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "2025-12-29-shangrila-napa",
+  "chapter": "shangrila",
+  "dayLabel": "Day 01",
+  "title": {
+    "en": "Napa Lake",
+    "jp": "ナパ海",
+    "cn": "纳帕海"
+  },
+  "location": {
+    "en": "Shangri-La, Yunnan",
+    "jp": "シャングリラ, 雲南省",
+    "cn": "香格里拉, 云南省"
+  },
+  "place": {
+    "en": "Napa Lake, Shangri-La",
+    "jp": "ナパ海、シャングリラ",
+    "cn": "纳帕海，香格里拉"
+  },
+  "date": "12.29.2025",
+  "timeOfDay": {
+    "en": "",
+    "jp": "",
+    "cn": ""
+  },
+  "essay": [
+    { "kind": "lede-first", "text": {
+      "en": "For the first time, a couple — and her, the way she carried herself, unlike anyone else.",
+      "jp": "はじめて、ふたり連れの恋人たちに出会った。彼女の出で立ちは、ほかの誰とも、似ていなかった。",
+      "cn": "第一次遇见一对情侣，女生的妆造和别人都不太一样。"
+    }},
+    { "kind": "body", "text": {
+      "en": "At Napa Lake she was like a clear, translucent mulberry.",
+      "jp": "ナパ湖のほとり、彼女はまるで、透きとおった桑の実のようだった。",
+      "cn": "在纳帕海像一颗清透的桑椹。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Beside the great prayer flags, I took these photographs with her.",
+      "jp": "大きな経幡（タルチョ）のもとで、彼女と一緒に、これらの写真を撮った。",
+      "cn": "在大经幡和她一起拍下了这些照片。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "I heard the great flags at Napa Lake have since been taken down. I don't know if it's true.",
+      "jp": "ナパ湖のあの大きな経幡は、もう取り外されてしまったと聞いた。本当のところは、わからない。",
+      "cn": "听说纳帕海的大经幡已经被拆了，不知道是否是这样。"
+    }}
+  ],
+  "credits": {
+    "photographer": "みんみん",
+    "film": "cyanotype 3030",
+    "camera": "Sony α7 III",
+    "developed": "12.30.2025"
+  },
+  "photoBase": "/photos/2025-12-29-shangrila-napa",
+  "photos": [
+    { "file": "01", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "02", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "03", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "04", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "05", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "06", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "07", "caption": { "en": "—", "jp": "—", "cn": "—" } }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "2025-12-27-houniao-wan",
+  "chapter": "yulong",
+  "dayLabel": "Day 01",
+  "title": {
+    "en": "Migratory Bird Bay",
+    "jp": "候鳥湾湿地",
+    "cn": "候鸟湾湿地"
+  },
+  "location": {
+    "en": "Lijiang, Yunnan",
+    "jp": "麗江, 雲南省",
+    "cn": "丽江, 云南省"
+  },
+  "place": {
+    "en": "Migratory Bird Bay, Lijiang",
+    "jp": "候鳥湾湿地、麗江",
+    "cn": "候鸟湾湿地，丽江"
+  },
+  "date": "12.27.2025",
+  "timeOfDay": {
+    "en": "",
+    "jp": "",
+    "cn": ""
+  },
+  "essay": [
+    { "kind": "lede-first", "text": {
+      "en": "First day in Yunnan. Travel-worn, we made our way to this place.",
+      "jp": "雲南、初日。長旅の埃をまとったまま、この場所までやって来た。",
+      "cn": "来云南的第一天。风尘仆仆，去了这个地方。"
+    }},
+    { "kind": "body", "text": {
+      "en": "The weather was fine — but almost everything was backlit, as if we stood on the far side of the sun.",
+      "jp": "天気は良かった。けれど、ほとんどすべてが逆光だった。太陽の、向こう側に立っているように。",
+      "cn": "很好的天气，但几乎全是背光，像是站在了太阳的对面。"
+    }},
+    { "kind": "body", "text": {
+      "en": "Wild land, and clean air.",
+      "jp": "自然。そして、澄みきった空気。",
+      "cn": "自然和清新的空气。"
+    }},
+    { "kind": "dropline", "text": {
+      "en": "And the birds wintering here — from Siberia, they say.",
+      "jp": "そして、冬を越しにやって来た渡り鳥たち。シベリアから、と聞いた。",
+      "cn": "以及来过冬的候鸟，听说来自西伯利亚。"
+    }}
+  ],
+  "credits": {
+    "photographer": "みんみん",
+    "film": "cyanotype 3030",
+    "camera": "Sony α7 III",
+    "developed": "12.28.2025"
+  },
+  "photoBase": "/photos/2025-12-27-houniao-wan",
+  "photos": [
+    { "file": "01", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "02", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "03", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "04", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "05", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "06", "caption": { "en": "—", "jp": "—", "cn": "—" } }
+  ]
+}
