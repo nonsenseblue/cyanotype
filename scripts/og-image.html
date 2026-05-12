@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>cyanotype og</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #1a1817; }
+    body {
+      font-family: "Cormorant Garamond", "Iowan Old Style", "Times New Roman", serif;
+      color: #1a1817;
+    }
+    .og {
+      width: 1200px;
+      height: 630px;
+      background: #faf8f3;
+      position: relative;
+      overflow: hidden;
+    }
+    .og-brand {
+      position: absolute;
+      top: 25%;
+      left: 0;
+      right: 0;
+      margin: 0;
+      text-align: center;
+      font-size: 132px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.014em;
+      color: #14304e;
+    }
+    .og-tagline {
+      position: absolute;
+      top: 64%;
+      left: 0;
+      right: 0;
+      margin: 0;
+      text-align: center;
+      font-size: 40px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      color: #1a1817;
+    }
+    .og-mark {
+      position: absolute;
+      color: #14304e;
+    }
+    .og-mark svg { width: 100%; height: 100%; display: block; }
+    .og-mark--star  { top: 215px; left: 200px; width: 40px;  height: 40px; }
+    .og-mark--moon  { top: 395px; left: 170px; width: 60px;  height: 60px; }
+    .og-mark--star2 { top: 218px; right: 208px; width: 38px;  height: 38px; }
+    .og-mark--camera{ top: 388px; right: 150px; width: 92px;  height: 76px; }
+
+    .og-spark {
+      position: absolute;
+      bottom: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 22px;
+      height: 22px;
+      color: #14304e;
+      opacity: 0.55;
+    }
+    .og-spark svg { width: 100%; height: 100%; display: block; }
+
+    .og-handrule {
+      position: absolute;
+      bottom: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 420px;
+      height: 20px;
+      color: #14304e;
+      opacity: 0.45;
+    }
+    .og-handrule svg { width: 100%; height: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <div class="og">
+    <h1 class="og-brand">cyanotype</h1>
+
+    <p class="og-tagline">We live in a handful of moments.</p>
+
+    <span class="og-mark og-mark--star">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12,4 C13,9 14,10 18,11 C14,12 13,13 12,18 C11,13 10,12 6,11 C10,10 11,9 12,4 Z"
+              fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </span>
+
+    <span class="og-mark og-mark--moon">
+      <svg viewBox="0 0 60 60" aria-hidden="true">
+        <path d="M36,8 C26,8 18,16 16,28 C14,40 22,50 34,52 C26,46 22,38 22,30 C22,18 28,10 36,8 Z"
+              fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
+      </svg>
+    </span>
+
+    <span class="og-mark og-mark--star2">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12,4 C13,9 14,10 18,11 C14,12 13,13 12,18 C11,13 10,12 6,11 C10,10 11,9 12,4 Z"
+              fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </span>
+
+    <span class="og-mark og-mark--camera">
+      <svg viewBox="0 0 60 50" aria-hidden="true">
+        <path d="M8,18 L14,18 L18,12 L42,12 L46,18 L52,18 C54,18 56,20 56,22 L56,40 C56,42 54,44 52,44 L8,44 C6,44 4,42 4,40 L4,22 C4,20 6,18 8,18 Z"
+              fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
+        <circle cx="30" cy="30" r="8" fill="none" stroke="currentColor" stroke-width="1.2" />
+        <circle cx="30" cy="30" r="3" fill="none" stroke="currentColor" stroke-width="1.2" />
+        <circle cx="48" cy="22" r="1.4" fill="currentColor" stroke="none" />
+      </svg>
+    </span>
+
+    <span class="og-spark">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12,4 C13,9 14,10 18,11 C14,12 13,13 12,18 C11,13 10,12 6,11 C10,10 11,9 12,4 Z"
+              fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </span>
+
+    <span class="og-handrule">
+      <svg viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M3,9 C28,4 52,11 78,7 C104,3 130,11 156,7 C182,3 210,10 237,6"
+              fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </span>
+  </div>
+</body>
+</html>
