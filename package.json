@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-react-ssg build && mkdir -p dist/about && mv dist/about.html dist/about/index.html",
+    "build": "vite-react-ssg build && mkdir -p dist/about dist/settings && mv dist/about.html dist/about/index.html && mv dist/settings.html dist/settings/index.html",
     "preview": "vite preview"
   },
   "dependencies": {
