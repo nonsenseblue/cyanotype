@@ -28,6 +28,13 @@ export function ChapterPage({ chapter, days, issue, nextChapter, onOpenLightbox 
           <span>{t(chapter.place)}</span>
         </p>
         <p className="chapter-masthead-lede">{t(chapter.lede)}</p>
+        {issue.kit && (
+          <p className="chapter-masthead-kit">
+            <span className="kit-part">{t(issue.kit.camera)}</span>
+            <span className="kit-sep" aria-hidden="true">·</span>
+            <span className="kit-part">{t(issue.kit.lens)}</span>
+          </p>
+        )}
       </header>
 
       <HandRule />

@@ -1969,6 +1969,43 @@ html[lang="zh-Hans"] .vol-section-subtitle {
   margin-right: auto;
 }
 
+.chapter-masthead-kit {
+  margin-top: clamp(20px, 2.4vw, 26px);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px 14px;
+}
+
+.chapter-masthead-kit .kit-part {
+  white-space: nowrap;
+}
+
+.chapter-masthead-kit .kit-sep {
+  opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+  .chapter-masthead-kit {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    gap: 4px;
+  }
+  .chapter-masthead-kit .kit-sep {
+    display: none;
+  }
+  .chapter-masthead-kit .kit-part {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
 .day-section { margin-bottom: clamp(40px, 6vw, 80px); }
 
 .day-masthead {
@@ -2781,4 +2818,17 @@ body.opening-active .custom-cursor {
 
 @media (max-width: 720px) {
   .opening-cursor-panel { display: none; }
+  .colophon-settings { display: none; }
+}
+
+/* SP: let hero intro / volume subtitle / chapter lede wrap on natural balance */
+@media (max-width: 640px) {
+  .hero-intro,
+  .vol-section-subtitle,
+  .chapter-masthead-lede {
+    max-width: 22em;
+    margin-left: auto;
+    margin-right: auto;
+    text-wrap: balance;
+  }
 }
