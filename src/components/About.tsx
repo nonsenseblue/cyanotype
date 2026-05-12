@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
 import { HandRule } from './HandRule';
 
@@ -195,7 +196,10 @@ export function About({ about }) {
 
       <HandRule variant="bottom" />
 
-      <p className="issue-colophon">cyanotype · 3030</p>
+      <div className="colophon-row">
+        <p className="issue-colophon">cyanotype · 3030</p>
+        <Link to="/settings" className="colophon-settings">Settings</Link>
+      </div>
     </article>
   );
 }

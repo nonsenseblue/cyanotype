@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { LanguageProvider, useLang } from './contexts/LanguageContext';
+import { CursorProvider } from './contexts/CursorContext';
 import { Lightbox } from './components/Lightbox';
 import { SiteHeader } from './components/SiteHeader';
+import { CustomCursor } from './components/CustomCursor';
+import { OpeningSequence } from './components/OpeningSequence';
 import { useLightbox } from './hooks/useLightbox';
 import issue from './data/issue.json';
 
@@ -30,6 +33,8 @@ function Layout() {
       <Outlet context={{ lightbox }} />
       <div className="film-frame film-frame-bottom" aria-hidden="true" />
       <Lightbox src={lightbox.src} closing={lightbox.closing} onClose={lightbox.close} />
+      <CustomCursor />
+      <OpeningSequence />
     </>
   );
 }
@@ -37,7 +42,9 @@ function Layout() {
 export default function App() {
   return (
     <LanguageProvider>
-      <Layout />
+      <CursorProvider>
+        <Layout />
+      </CursorProvider>
     </LanguageProvider>
   );
 }
