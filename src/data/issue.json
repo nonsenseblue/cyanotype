@@ -11,6 +11,18 @@
     "jp": "シアノタイプ ―― 十九世紀に生まれた、世界を深い青に焼きつける写真技法。その名を借りて、留めておきたい瞬間を、静かに綴る。",
     "cn": "Cyanotype——诞生于十九世纪的影像工艺，将世界印在一片深蓝里。借这个名字，安静地，记下那些值得留住的瞬间。"
   },
+  "kit": {
+    "camera": {
+      "en": "Sony α7 III",
+      "jp": "Sony α7 III",
+      "cn": "索尼 α7 III"
+    },
+    "lens": {
+      "en": "Tamron 25–200mm F/2.8–5.6 Di III VC RXD G2 (A075)",
+      "jp": "Tamron 25–200mm F/2.8–5.6 Di III VC RXD G2 (A075)",
+      "cn": "腾龙 25–200mm F/2.8–5.6 Di III VC RXD G2 (A075)"
+    }
+  },
   "volumes": [
     {
       "volume": "Vol. 01",
