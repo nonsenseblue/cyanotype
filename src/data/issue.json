@@ -177,7 +177,7 @@
       "lede": {
         "en": "A city seen from across the water — and a beach borrowed from it.",
         "jp": "水を隔てて街を眺め、街から借りた海辺を歩く。",
-        "cn": "隔水望城——再走进城所借出的一片海。"
+        "cn": "隔水的一座城，与城借出的那片海。"
       },
       "covers": [
         { "photoBase": "/photos/2026-05-01-bondi-beach", "file": "04" }
@@ -210,7 +210,7 @@
       "lede": {
         "en": "A morning among the animals; an afternoon along the surf.",
         "jp": "動物たちと過ごす朝。波打ち際を歩く午後。",
-        "cn": "与动物相伴的清晨。沿着浪线走过的午后。"
+        "cn": "与动物相伴的清晨，沿浪线走过的午后。"
       },
       "covers": [
         { "photoBase": "/photos/2026-05-03-gold-coast", "file": "05" }
@@ -243,7 +243,7 @@
       "lede": {
         "en": "The fallen sun, in pieces, on the lake.",
         "jp": "落ちた太陽が、湖の上で砕けてひらいてゆく。",
-        "cn": "落下的太阳,在湖面上碎成无数片光。"
+        "cn": "落下的太阳，在湖面碎成无数光点。"
       },
       "covers": [
         { "photoBase": "/photos/2026-05-04-boonah", "file": "02" }

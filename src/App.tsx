@@ -32,7 +32,13 @@ function Layout() {
       <SiteHeader issue={issue} currentKey={currentKey} />
       <Outlet context={{ lightbox }} />
       <div className="film-frame film-frame-bottom" aria-hidden="true" />
-      <Lightbox src={lightbox.src} closing={lightbox.closing} onClose={lightbox.close} />
+      <Lightbox
+        src={lightbox.src}
+        srcs={lightbox.srcs}
+        closing={lightbox.closing}
+        onClose={lightbox.close}
+        onNavigate={lightbox.navigate}
+      />
       <CustomCursor />
       <OpeningSequence />
     </>

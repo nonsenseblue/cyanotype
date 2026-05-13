@@ -922,6 +922,16 @@ html[lang="zh-Hans"] .site-drawer .site-drawer-link:first-of-type {
     padding-top: 0;
   }
   .meta-block { padding: 0; }
+  .stage-frame {
+    height: auto;
+    max-height: 80vh;
+    max-width: 100%;
+    touch-action: pan-y pinch-zoom;
+  }
+  .stage-frame img {
+    width: 100%;
+    height: auto;
+  }
   .viewer-thumbs {
     flex-direction: row;
     overflow-x: auto;
@@ -2819,6 +2829,14 @@ body.opening-active .custom-cursor {
 @media (max-width: 720px) {
   .opening-cursor-panel { display: none; }
   .colophon-settings { display: none; }
+  .opening-viewfinder {
+    animation-name: openingViewfinderInSP;
+  }
+}
+
+@keyframes openingViewfinderInSP {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* SP: let hero intro / volume subtitle / chapter lede wrap on natural balance */

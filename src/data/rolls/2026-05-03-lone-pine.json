@@ -27,12 +27,12 @@
     { "kind": "lede-first", "text": {
       "en": "A zoo? Not really mine — never was.",
       "jp": "動物園? わたしの好きなものでは、なかった——ずっと、なかった。",
-      "cn": "动物园？并非我所偏爱——一直，都不是。"
+      "cn": "动物园？向来不是我喜欢去的地方。"
     }},
     { "kind": "body", "text": {
       "en": "But this one — the first place I have walked where animals were near enough to touch. Not large. And yet, somehow, wider.",
       "jp": "けれどここは、わたしがこれまで歩いた中で、動物たちに手の届きそうな初めての場所だった。広いとは言えない。それでも、どこか、広かった。",
-      "cn": "但这里——是我走过的所有地方里，动物近得能伸手触到的第一处。并不大。却，不知为何，更宽阔。"
+      "cn": "但这里——是我走过的所有地方里，动物们近在咫尺。\n动物园本身并不大。却不知为何感觉更加宽阔。"
     }},
     { "kind": "body", "text": {
       "en": "Lawns rolling on and on, going gold with early autumn.",
@@ -42,27 +42,27 @@
     { "kind": "body", "text": {
       "en": "Sky blue. Clouds within reach.",
       "jp": "空は青く。雲は手の届きそうなところに。",
-      "cn": "天空澄蓝。云朵触手可及。"
+      "cn": "天空湛蓝。云朵触手可及。"
     }},
     { "kind": "body", "text": {
       "en": "Koalas. Kangaroos lazing, hopping wherever.",
       "jp": "コアラ。寝そべるカンガルー、思いのままに跳ねるカンガルー。",
-      "cn": "树袋熊。袋鼠，慵懒地躺着，又随意地跳跃。"
+      "cn": "树袋熊在慵懒地躺着，袋鼠在随意地跳跃。"
     }},
     { "kind": "body", "text": {
       "en": "A lizard, fleeing. A sheep walking slowly. An ostrich, slower still.",
       "jp": "走り去るトカゲ。ゆっくり歩く羊。それより、もっとゆっくりなダチョウ。",
-      "cn": "一只蜥蜴，仓皇逃去。一只绵羊，慢慢走着。一只鸵鸟，更慢。"
+      "cn": "一只蜥蜴，仓皇逃去。一只绵羊，低头吃草。一只鸵鸟，更是自由散漫。"
     }},
     { "kind": "dropline", "text": {
       "en": "And so — I, too, came to love the zoo.",
       "jp": "そうして——わたしもまた、動物園を好きになった。",
-      "cn": "就这样——我也，喜欢上了动物园。"
+      "cn": "就这样，我也喜欢上了动物园。"
     }},
     { "kind": "dropline", "text": {
       "en": "If someone says they don't like zoos, that only means they have not yet found the one that belongs to them.",
       "jp": "動物園が好きじゃないと言う人は、まだ、自分にぴったりの動物園に出会っていないだけ。",
-      "cn": "若有人说不喜欢动物园，那不过是因为，他还未遇见属于自己的那一座。"
+      "cn": "如果有人说不喜欢动物园，那只是因为，他还没遇见属于自己的那一座。"
     }}
   ],
   "credits": {
