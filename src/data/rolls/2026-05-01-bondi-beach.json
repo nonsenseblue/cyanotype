@@ -27,37 +27,37 @@
     { "kind": "lede-first", "text": {
       "en": "On the grass — people reading, people sleeping.",
       "jp": "芝生の上には、本を読む人、眠る人。",
-      "cn": "草地上——读书的人，睡着的人。"
+      "cn": "草地上——读书的人、睡着的人。"
     }},
     { "kind": "lede-first", "text": {
       "en": "On the sand — reading, eating, playing volleyball.",
       "jp": "砂浜には、本を読む人、何かを食べる人、ビーチバレーに興じる人々。",
-      "cn": "沙滩上——读书的、用餐的、打着排球的。"
+      "cn": "沙滩上——用餐的、日光浴的、打着沙滩排球的人。"
     }},
     { "kind": "body", "text": {
       "en": "The day was clear. So were they.",
       "jp": "その日は晴れていた。人々もまた、晴れやかだった。",
-      "cn": "那天很晴。人们，也很明朗。"
+      "cn": "那天很晴。人们也很明朗。"
     }},
     { "kind": "body", "text": {
       "en": "Close to the city. Gulls everywhere. Houses bright with colour, in rows.",
       "jp": "街に近く、カモメはあちらこちらに。色とりどりの家々が、軒を連ねていた。",
-      "cn": "离城不远。海鸥到处都是。色彩明亮的房子，一排排。"
+      "cn": "海鸥到处都是。还有一排排色彩明亮的房子。"
     }},
     { "kind": "body", "text": {
       "en": "For me — an afternoon borrowed.",
       "jp": "わたしには、借り物の午後。",
-      "cn": "对我而言——一段借来的午后。"
+      "cn": "对我来说，一段借来的午后。"
     }},
     { "kind": "body", "text": {
       "en": "For them — any other day.",
       "jp": "彼らには、ありふれた一日。",
-      "cn": "对他们——再平常不过的一天。"
+      "cn": "对他们而言，这只是再平常不过的一天。"
     }},
     { "kind": "dropline", "text": {
       "en": "Quietly, I envied. Quietly, I was drawn.",
       "jp": "静かに、羨んでいた。静かに、惹かれていた。",
-      "cn": "静静地，羡慕。静静地，被吸引。"
+      "cn": ""
     }}
   ],
   "credits": {

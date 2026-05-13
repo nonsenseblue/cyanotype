@@ -12,9 +12,13 @@ export function Essay({ paragraphs }) {
   const t = useT();
   return (
     <section className="essay" ref={ref}>
-      {paragraphs.map((p, i) => (
-        <p key={i} className={KIND_CLASS[p.kind] ?? 'essay-body'}>{t(p.text)}</p>
-      ))}
+      {paragraphs.map((p, i) => {
+        const text = t(p.text);
+        if (!text || !text.trim()) return null;
+        return (
+          <p key={i} className={KIND_CLASS[p.kind] ?? 'essay-body'}>{text}</p>
+        );
+      })}
     </section>
   );
 }

@@ -27,7 +27,7 @@
     { "kind": "lede-first", "text": {
       "en": "A first walk: from the far end of Miami Beach, all the way to the centre.",
       "jp": "はじめての散歩。マイアミビーチの端から、中心まで。",
-      "cn": "第一次散步：从迈阿密海滩的尽头，一路走到中心。"
+      "cn": "在黄金海岸第一次散步：从迈阿密海滩的尽头，一路走到中心。"
     }},
     { "kind": "body", "text": {
       "en": "The light was kind. The people looked happy.",
@@ -37,17 +37,17 @@
     { "kind": "body", "text": {
       "en": "Sunlight on water, the smell of salt, dogs led at the heels of their owners, runners passing through. A few of us — travellers — threading among them.",
       "jp": "水の上の陽射し、潮の匂い、飼い主の足元を歩く犬たち、走り抜けてゆく人々。わたしたち何人か——旅人——もまた、そのあいだを縫って歩いた。",
-      "cn": "水面的阳光，海盐的气息，跟在主人脚边的狗，跑步而过的人。我们几人——旅人——在他们之间穿行。"
+      "cn": "水面的阳光、海盐的气息，\n跟在主人脚边的狗，跑步而过的人。\n我们几位旅人穿行在他们之间。"
     }},
     { "kind": "body", "text": {
       "en": "Moment folding into moment. Lives brushing, briefly, against lives.",
       "jp": "瞬間が、瞬間に折り重なってゆく。命が、つかの間、別の命に触れてゆく。",
-      "cn": "一刻叠着一刻。生命，与另一段生命，短暂地相擦。"
+      "cn": "我们此刻的生活短暂相交。"
     }},
     { "kind": "dropline", "text": {
       "en": "An hour that felt like a gift. I thought, a month. I could give a month to this place.",
       "jp": "贈りもののような一時間。一か月——この街には、一か月を捧げてもいいと思った。",
-      "cn": "像被赠予的一小时。我想——一个月。我愿把一个月，留在这里。"
+      "cn": "像被赠予的一小时。\n我想，一个月。\n要是可以的话，把一个月留在这里。"
     }}
   ],
   "credits": {

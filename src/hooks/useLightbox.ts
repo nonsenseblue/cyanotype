@@ -1,30 +1,45 @@
 import { useCallback, useEffect, useState } from 'react';
 
 export function useLightbox() {
-  const [src, setSrc] = useState(null);
+  const [srcs, setSrcs] = useState<string[] | null>(null);
+  const [index, setIndex] = useState(0);
   const [closing, setClosing] = useState(false);
 
-  const open = useCallback((imageSrc) => {
+  const open = useCallback((nextSrcs: string | string[], startIndex = 0) => {
     setClosing(false);
-    setSrc(imageSrc);
+    const arr = Array.isArray(nextSrcs) ? nextSrcs : [nextSrcs];
+    setSrcs(arr);
+    setIndex(startIndex < arr.length ? startIndex : 0);
   }, []);
 
   const close = useCallback(() => {
     setClosing(true);
     setTimeout(() => {
-      setSrc(null);
+      setSrcs(null);
+      setIndex(0);
       setClosing(false);
     }, 200);
   }, []);
 
+  const navigate = useCallback((dir: number) => {
+    setIndex((i) => {
+      if (!srcs) return i;
+      return (i + dir + srcs.length) % srcs.length;
+    });
+  }, [srcs]);
+
   useEffect(() => {
-    if (!src) return;
-    const onKey = (e) => {
+    if (!srcs) return;
+    const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') close();
+      if (e.key === 'ArrowRight') navigate(1);
+      if (e.key === 'ArrowLeft') navigate(-1);
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [src, close]);
+  }, [srcs, close, navigate]);
 
-  return { src, closing, open, close, isOpen: Boolean(src) };
+  const src = srcs ? srcs[index] : null;
+
+  return { src, srcs, index, closing, open, close, navigate, isOpen: Boolean(srcs) };
 }

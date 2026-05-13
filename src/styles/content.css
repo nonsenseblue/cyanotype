@@ -18,6 +18,7 @@
 
 .essay p {
   margin-bottom: 0.9em;
+  white-space: pre-line;
 }
 .essay p:last-child { margin-bottom: 0; }
 

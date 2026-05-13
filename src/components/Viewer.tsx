@@ -48,6 +48,38 @@ export function Viewer({ photos, photoBase, photographer, place, onOpenLightbox 
 
   const stageSrc = photoUrl(photoBase, 'large', current.file);
 
+  const touchStartX = useRef(null);
+  const touchStartY = useRef(null);
+  const swipedRef = useRef(false);
+
+  const handleTouchStart = (e) => {
+    const t0 = e.touches[0];
+    touchStartX.current = t0.clientX;
+    touchStartY.current = t0.clientY;
+    swipedRef.current = false;
+  };
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current == null) return;
+    const t1 = e.changedTouches[0];
+    const dx = t1.clientX - touchStartX.current;
+    const dy = t1.clientY - touchStartY.current;
+    touchStartX.current = null;
+    touchStartY.current = null;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+      swipedRef.current = true;
+      if (dx > 0) goPrev();
+      else goNext();
+    }
+  };
+  const handleStageClick = () => {
+    if (swipedRef.current) {
+      swipedRef.current = false;
+      return;
+    }
+    const allSrcs = photos.map((p) => photoUrl(photoBase, 'large', p.file));
+    onOpenLightbox(allSrcs, currentIndex);
+  };
+
   return (
     <section className="viewer" ref={reveal}>
 
@@ -74,12 +106,16 @@ export function Viewer({ photos, photoBase, photographer, place, onOpenLightbox 
       </div>
 
       <figure className="viewer-stage">
-        <div className="stage-frame">
+        <div
+          className="stage-frame"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <img
             src={stageSrc}
             alt={captionText}
             className={fading ? 'is-fading' : ''}
-            onClick={() => onOpenLightbox(stageSrc)}
+            onClick={handleStageClick}
           />
         </div>
         <figcaption>{captionText}</figcaption>
