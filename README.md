@@ -2,7 +2,7 @@
 
 A small multilingual photo magazine. EN / 日本語 / 中文.
 
-Live: <https://nonsenseblue.github.io/cyanotype/>
+Live: <https://cyanotype3030.vercel.app/>
 
 > *We live in a handful of moments.*
 
