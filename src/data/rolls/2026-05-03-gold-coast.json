@@ -32,11 +32,11 @@
     { "kind": "body", "text": {
       "en": "The light was kind. The people looked happy.",
       "jp": "光はやさしく、人々はうれしそうだった。",
-      "cn": "光是温柔的。人们看上去很幸福。"
+      "cn": "温柔的光线。人们看上去很幸福。"
     }},
     { "kind": "body", "text": {
-      "en": "Sunlight on water, the smell of salt, dogs led at the heels of their owners, runners passing through. A few of us — travellers — threading among them.",
-      "jp": "水の上の陽射し、潮の匂い、飼い主の足元を歩く犬たち、走り抜けてゆく人々。わたしたち何人か——旅人——もまた、そのあいだを縫って歩いた。",
+      "en": "Sunlight on water, the smell of salt, dogs led at the heels of their owners, runners passing through. A few of us, travellers, threading among them.",
+      "jp": "水の上の陽射し、潮の匂い、飼い主の足元を歩く犬たち、走り抜けてゆく人々。わたしたち何人かの旅人もまた、そのあいだを縫って歩いた。",
       "cn": "水面的阳光、海盐的气息，\n跟在主人脚边的狗，跑步而过的人。\n我们几位旅人穿行在他们之间。"
     }},
     { "kind": "body", "text": {
@@ -46,7 +46,7 @@
     }},
     { "kind": "dropline", "text": {
       "en": "An hour that felt like a gift. I thought, a month. I could give a month to this place.",
-      "jp": "贈りもののような一時間。一か月——この街には、一か月を捧げてもいいと思った。",
+      "jp": "贈りもののような一時間。一か月、この街には、一か月を捧げてもいいと思った。",
       "cn": "像被赠予的一小时。\n我想，一个月。\n要是可以的话，把一个月留在这里。"
     }}
   ],
@@ -66,7 +66,7 @@
     { "file": "02", "caption": {
       "en": "Two on the cliff edge.",
       "jp": "崖の縁に、ふたり。",
-      "cn": "崖边，两个人。"
+      "cn": "崖边的两个人。"
     }},
     { "file": "03", "caption": {
       "en": "A couple, framed by their photographer.",
@@ -76,17 +76,17 @@
     { "file": "04", "caption": {
       "en": "A handstand against the surf.",
       "jp": "波を背に、逆立ちする人。",
-      "cn": "浪声里的，倒立。"
+      "cn": "浪声里的倒立身影。"
     }},
     { "file": "05", "caption": {
       "en": "Skyline through sea mist.",
       "jp": "海霧の向こうに、街の影。",
-      "cn": "海雾之中，城市的轮廓。"
+      "cn": "海雾之中城市的轮廓。"
     }},
     { "file": "06", "caption": {
       "en": "A figure, a cloud.",
       "jp": "ひとつの人影と、ひとつの雲。",
-      "cn": "一人，一云。"
+      "cn": "一个人，一片云。"
     }},
     { "file": "07", "caption": {
       "en": "Evening shoreline.",

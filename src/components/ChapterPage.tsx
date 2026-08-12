@@ -19,7 +19,7 @@ export function ChapterPage({ chapter, days, issue, nextChapter, onOpenLightbox 
         <ChapterMarks chapterKey={chapter.key} />
         <div className="masthead-line">
           <span className="kicker">
-            {chapter.volume || issue.volume} — {t(chapter.issueTitle || issue.title)}
+            {chapter.volume || issue.volume} · {t(chapter.issueTitle || issue.title)}
           </span>
           <span className="kicker kicker-right">{t(chapter.label)}</span>
         </div>
@@ -56,7 +56,7 @@ export function ChapterPage({ chapter, days, issue, nextChapter, onOpenLightbox 
 
           <div className="colophon-row">
             <p className="issue-colophon">
-              cyanotype · {chapter.volume} — {t(chapter.issueTitle)}
+              cyanotype · {chapter.volume} · {t(chapter.issueTitle)}
             </p>
             <Link to="/settings" className="colophon-settings">Settings</Link>
           </div>

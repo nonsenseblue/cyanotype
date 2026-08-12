@@ -1,9 +1,28 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 export function Lightbox({ src, srcs, closing, onClose, onNavigate }) {
+  const containerRef = useRef(null);
   const touchStartX = useRef(null);
   const touchStartY = useRef(null);
   const swipedRef = useRef(false);
+
+  useEffect(() => {
+    if (!src) return;
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    };
+  }, [src]);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const onMove = (e) => { e.preventDefault(); };
+    el.addEventListener('touchmove', onMove, { passive: false });
+    return () => el.removeEventListener('touchmove', onMove);
+  }, [src]);
 
   if (!src) return null;
 
@@ -37,6 +56,7 @@ export function Lightbox({ src, srcs, closing, onClose, onNavigate }) {
 
   return (
     <div
+      ref={containerRef}
       className={`lightbox${closing ? ' is-closing' : ''}`}
       onClick={handleClick}
       onTouchStart={handleTouchStart}

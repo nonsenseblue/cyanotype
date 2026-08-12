@@ -486,7 +486,7 @@ html[lang="zh-Hans"] .home-about-link {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 30%;
+  object-position: 58% 58%;
 }
 
 /* Hand-drawn marks scattered around the portrait, each breathing on its
@@ -667,7 +667,7 @@ html[lang="zh-Hans"] .site-drawer .site-drawer-link:first-of-type {
 
 @media (max-width: 720px) {
   .site-header {
-    margin-bottom: clamp(28px, 5vw, 48px);
+    margin-bottom: clamp(44px, 7vw, 60px);
     padding-bottom: clamp(14px, 2vw, 22px);
   }
   .site-nav--desktop,
@@ -847,6 +847,24 @@ html[lang="zh-Hans"] .site-drawer .site-drawer-link:first-of-type {
   letter-spacing: 0.012em;
   color: var(--ink-faint);
   line-height: 1.45;
+}
+
+.stage-nav {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .stage-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  .stage-nav-counter {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--ink-faint);
+  }
 }
 
 .viewer-thumbs {
@@ -1709,8 +1727,6 @@ html[lang="zh-Hans"] .vol-section-subtitle {
   .chapter-grid {
     grid-template-columns: 1fr;
     max-width: 360px;
-    /* On phones the chapters stack vertically — give them clear breathing
-       room so adjacent cards within the same volume don't blur together. */
     row-gap: clamp(48px, 11vw, 72px);
   }
 }
@@ -2158,8 +2174,8 @@ html[lang="zh-Hans"] .chapter-next-title {
 
 /* Pen-drawn entrance for the arrow */
 .chapter-next-arrow path {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
 }
 
 .chapter-next.is-visible .chapter-next-arrow-shaft {

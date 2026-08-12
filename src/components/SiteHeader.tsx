@@ -147,7 +147,7 @@ export function SiteHeader({ issue, currentKey }) {
               return (
                 <section className="drawer-vol" key={vol.volume}>
                   <p className="drawer-vol-label">
-                    {vol.volume} — {t(vol.title)}
+                    {vol.volume} · {t(vol.title)}
                   </p>
                   {volChapters.map((c) => (
                     <Link

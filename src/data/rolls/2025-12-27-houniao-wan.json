@@ -30,7 +30,7 @@
       "cn": "来云南的第一天。风尘仆仆，去了这个地方。"
     }},
     { "kind": "body", "text": {
-      "en": "The weather was fine — but almost everything was backlit, as if we stood on the far side of the sun.",
+      "en": "The weather was fine, but almost everything was backlit, as if we stood on the far side of the sun.",
       "jp": "天気は良かった。けれど、ほとんどすべてが逆光だった。太陽の、向こう側に立っているように。",
       "cn": "很好的天气，但几乎全是背光，像是站在了太阳的对面。"
     }},
@@ -40,7 +40,7 @@
       "cn": "自然和清新的空气。"
     }},
     { "kind": "dropline", "text": {
-      "en": "And the birds wintering here — from Siberia, they say.",
+      "en": "And the birds wintering here, from Siberia, they say.",
       "jp": "そして、冬を越しにやって来た渡り鳥たち。シベリアから、と聞いた。",
       "cn": "以及来过冬的候鸟，听说来自西伯利亚。"
     }}

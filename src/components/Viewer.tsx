@@ -118,7 +118,12 @@ export function Viewer({ photos, photoBase, photographer, place, onOpenLightbox 
             onClick={handleStageClick}
           />
         </div>
-        <figcaption>{captionText}</figcaption>
+        <div className="stage-nav">
+          <span className="stage-nav-counter">{currentIndex + 1} / {photos.length}</span>
+        </div>
+        {captionText && captionText !== '—' && (
+          <figcaption>{captionText}</figcaption>
+        )}
       </figure>
 
       <aside className="viewer-thumbs" ref={thumbsRef}>

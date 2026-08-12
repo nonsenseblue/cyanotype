@@ -12,6 +12,9 @@ dist
 # Vercel CLI artifacts (contains project + token info)
 .vercel
 
+# Screenshot scripts (used by other projects)
+scripts/
+
 # Logs
 *.log
 npm-debug.log*

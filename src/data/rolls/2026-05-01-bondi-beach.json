@@ -25,19 +25,19 @@
   },
   "essay": [
     { "kind": "lede-first", "text": {
-      "en": "On the grass — people reading, people sleeping.",
+      "en": "On the grass, people reading, people sleeping.",
       "jp": "芝生の上には、本を読む人、眠る人。",
-      "cn": "草地上——读书的人、睡着的人。"
+      "cn": "草地上，读书的人、睡着的人。"
     }},
     { "kind": "lede-first", "text": {
-      "en": "On the sand — reading, eating, playing volleyball.",
+      "en": "On the sand, reading, eating, playing volleyball.",
       "jp": "砂浜には、本を読む人、何かを食べる人、ビーチバレーに興じる人々。",
-      "cn": "沙滩上——用餐的、日光浴的、打着沙滩排球的人。"
+      "cn": "沙滩上，用餐的、日光浴的、打着沙滩排球的人。"
     }},
     { "kind": "body", "text": {
       "en": "The day was clear. So were they.",
       "jp": "その日は晴れていた。人々もまた、晴れやかだった。",
-      "cn": "那天很晴。人们也很明朗。"
+      "cn": "那天很晴朗。人们也很明朗。"
     }},
     { "kind": "body", "text": {
       "en": "Close to the city. Gulls everywhere. Houses bright with colour, in rows.",
@@ -45,12 +45,12 @@
       "cn": "海鸥到处都是。还有一排排色彩明亮的房子。"
     }},
     { "kind": "body", "text": {
-      "en": "For me — an afternoon borrowed.",
+      "en": "For me, an afternoon borrowed.",
       "jp": "わたしには、借り物の午後。",
       "cn": "对我来说，一段借来的午后。"
     }},
     { "kind": "body", "text": {
-      "en": "For them — any other day.",
+      "en": "For them, any other day.",
       "jp": "彼らには、ありふれた一日。",
       "cn": "对他们而言，这只是再平常不过的一天。"
     }},

@@ -4,12 +4,12 @@
   "tagline": {
     "en": "We live in a handful of moments.",
     "jp": "人はある瞬間で\n生きてゆく",
-    "cn": "人活在某些瞬间里"
+    "cn": "We live in a handful of moments."
   },
   "intro": {
-    "en": "Cyanotype — a 19th-century photographic process that prints the world in deep cyan-blue. A name borrowed here for a quiet record of moments worth keeping.",
-    "jp": "シアノタイプ ―― 十九世紀に生まれた、世界を深い青に焼きつける写真技法。その名を借りて、留めておきたい瞬間を、静かに綴る。",
-    "cn": "Cyanotype——诞生于十九世纪的影像工艺，将世界印在一片深蓝里。借这个名字，安静地，记下那些值得留住的瞬间。"
+    "en": "Cyanotype: a 19th-century photographic process that prints the world in deep cyan-blue. A name borrowed here for a quiet record of moments worth keeping.",
+    "jp": "シアノタイプ。十九世紀に生まれた、世界を深い青に焼きつける写真技法。その名を借りて、留めておきたい瞬間を、静かに綴る。",
+    "cn": "Cyanotype，诞生于十九世纪的影像工艺，将世界印在一片深蓝里。借这个名字，安静地，记下那些值得留住的瞬间。"
   },
   "kit": {
     "camera": {
@@ -32,9 +32,9 @@
         "cn": "云南"
       },
       "subtitle": {
-        "en": "Five days. December 2025 — January 2026.",
-        "jp": "五日間、二〇二五年十二月——二〇二六年一月。",
-        "cn": "五日。二〇二五年十二月——二〇二六年一月。"
+        "en": "Five days. December 2025 to January 2026.",
+        "jp": "五日間、二〇二五年十二月から二〇二六年一月。",
+        "cn": "五日。二〇二五年十二月至二〇二六年一月。"
       }
     },
     {
@@ -76,9 +76,9 @@
         "cn": "中国 云南省"
       },
       "lede": {
-        "en": "Wintering birds, and a master's words — photography is subtraction.",
-        "jp": "渡り鳥たち、そして師の言葉——写真は、引き算であって、足し算じゃない。",
-        "cn": "越冬的候鸟，与师傅的话——摄影是减法，不是加法。"
+        "en": "Wintering birds, and a master's words: photography is subtraction.",
+        "jp": "渡り鳥たち、そして師の言葉。写真は、引き算であって、足し算じゃない。",
+        "cn": "越冬的候鸟，与师傅的话：摄影是减法，不是加法。"
       },
       "covers": [
         { "photoBase": "/photos/2025-12-28-yulong", "file": "01" }
@@ -142,9 +142,9 @@
         "cn": "中国 云南省"
       },
       "lede": {
-        "en": "First snow before dawn, then the new year — moon-silver, then sun-gold.",
+        "en": "First snow before dawn, then the new year. Moon-silver, then sun-gold.",
         "jp": "夜明け前の初雪、そして新年の朝。月の銀、それから朝日の金。",
-        "cn": "凌晨的初雪，与新年的清晨——月照银山，日照金山。"
+        "cn": "凌晨的初雪，与新年的清晨。月照银山，日照金山。"
       },
       "covers": [
         { "photoBase": "/photos/2026-01-01-meili", "file": "03" }
@@ -175,7 +175,7 @@
         "cn": "新南威尔士"
       },
       "lede": {
-        "en": "A city seen from across the water — and a beach borrowed from it.",
+        "en": "A city seen from across the water, and a beach borrowed from it.",
         "jp": "水を隔てて街を眺め、街から借りた海辺を歩く。",
         "cn": "隔水的一座城，与城借出的那片海。"
       },
@@ -274,8 +274,8 @@
         "cn": "索尼 A7M3，一台。"
       },
       {
-        "en": "Sony 50mm prime, Tamron 25–200mm zoom — only these two.",
-        "jp": "Sony 50mm 単焦点、Tamron 25–200mm ズーム——この二本だけ。",
+        "en": "Sony 50mm prime, Tamron 25–200mm zoom. Only these two.",
+        "jp": "Sony 50mm 単焦点、Tamron 25–200mm ズーム。この二本だけ。",
         "cn": "索尼定焦 50mm，腾龙变焦 25–200mm。只有这两支。"
       },
       {
@@ -400,9 +400,9 @@
     }
   ],
   "colophon": {
-    "en": "cyanotype · {volume} — {title}",
-    "jp": "cyanotype · {volume} — {title}",
-    "cn": "cyanotype · {volume} — {title}"
+    "en": "cyanotype · {volume} · {title}",
+    "jp": "cyanotype · {volume} · {title}",
+    "cn": "cyanotype · {volume} · {title}"
   },
   "homeColophon": {
     "en": "cyanotype · 3030",

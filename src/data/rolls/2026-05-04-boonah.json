@@ -26,13 +26,13 @@
   "essay": [
     { "kind": "lede-first", "text": {
       "en": "The last day in Australia. We drove out to this place.",
-      "jp": "オーストラリアでの最後の一日。車で、この場所までやって来た。",
-      "cn": "在澳大利亚的最后一天。我们驱车，一路来到这里。"
+      "jp": "オーストラリアでの最後の一日。車でこの場所までやって来た。",
+      "cn": "在澳大利亚的最后一天。我们驱车一路来到这里。"
     }},
     { "kind": "body", "text": {
-      "en": "Open fields stretched on. The road went on without end — as if there would be no day on which it stopped.",
-      "jp": "ひらけた草原がどこまでも続き、道もまた、果てしなく伸びていた——終わる日など、来ないかのように。",
-      "cn": "田野无尽延伸。公路也无尽延伸，仿佛永远，没有止息之日。"
+      "en": "Open fields stretched on. The road went on without end, as if there would be no day on which it stopped.",
+      "jp": "ひらけた草原がどこまでも続き、道もまた、果てしなく伸びていた。終わる日など、来ないかのように。",
+      "cn": "田野无尽延伸。公路也无尽延伸，仿佛永远没有止息之日。"
     }},
     { "kind": "body", "text": {
       "en": "Herds of cattle. Herds of horses.",
@@ -47,7 +47,7 @@
     { "kind": "body", "text": {
       "en": "The water rippled, scattered bright. The fallen sun, broken into pieces, opening on the surface.",
       "jp": "水面はさざ波立ち、明るく散った。落ちた太陽が、無数の欠片に砕け、湖の上にひらいていった。",
-      "cn": "水面泛起涟漪，散着光。\n落下的太阳，碎成无数片，在水面上一一绽开。"
+      "cn": "水面泛起涟漪，波光粼粼。\n落下的太阳，成为了细小的碎片，在水面上一一绽开。"
     }},
     { "kind": "dropline", "text": {
       "en": "Beautiful. This is what a journey is for.",

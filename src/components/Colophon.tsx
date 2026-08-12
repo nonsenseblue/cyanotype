@@ -6,9 +6,9 @@ export function Colophon({ film, camera, developed }) {
   return (
     <footer className="colophon">
       <span>{film}</span>
-      <span className="sep">—</span>
+      <span className="sep">·</span>
       <span>{camera}</span>
-      <span className="sep">—</span>
+      <span className="sep">·</span>
       <span>{t(issue.ui.developed)} {developed}</span>
     </footer>
   );

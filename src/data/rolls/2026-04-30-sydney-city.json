@@ -25,14 +25,14 @@
   },
   "essay": [
     { "kind": "lede-first", "text": {
-      "en": "Sydney — fair, clean, kept.",
-      "jp": "シドニー——美しく、清く、整っている。",
+      "en": "Sydney. Fair, clean, kept.",
+      "jp": "シドニー。美しく、清く、整っている。",
       "cn": "悉尼，美丽、洁净、井然。"
     }},
     { "kind": "body", "text": {
-      "en": "We stayed in the north. The Opera House — seen from across the water.",
+      "en": "We stayed in the north. The Opera House, seen from across the water.",
       "jp": "わたしたちは北側に泊まった。オペラハウスは、水を隔てて遠くに眺めた。",
-      "cn": "我们住在城北。歌剧院，隔水眺望。"
+      "cn": "我们住在城北。悉尼歌剧院与我们隔水眺望。"
     }},
     { "kind": "body", "text": {
       "en": "The office side, the morning, busy with feet.",
@@ -55,8 +55,8 @@
       "cn": "四月三十日。"
     }},
     { "kind": "body", "text": {
-      "en": "A short rain. After it, a rainbow, bright and whole — as if heaven were watching, kindly.",
-      "jp": "短い雨ののちに、虹がひとつ、まぶしくまるごと——空が、優しく見守ってくれているかのように。",
+      "en": "A short rain. After it, a rainbow, bright and whole, as if heaven were watching, kindly.",
+      "jp": "短い雨ののちに、虹がひとつ、まぶしくまるごと。空が、優しく見守ってくれているかのように。",
       "cn": "阵雨过后，一道完整明亮的彩虹，像是天空正静静地看着。"
     }},
     { "kind": "dropline", "text": {
@@ -75,7 +75,7 @@
       "cn": "这座城市，同样不属于我。"
     }},
     { "kind": "dropline", "text": {
-      "en": "And yet — when I press the shutter, for one breath, our times and our spaces cross.",
+      "en": "And yet, when I press the shutter, for one breath, our times and our spaces cross.",
       "jp": "それでも、シャッターを押すその一瞬だけ、わたしたちの時と空間が、ふと交わる。",
       "cn": "然而，只有按下快门的那一刻，我们的时空悄然交错。"
     }}

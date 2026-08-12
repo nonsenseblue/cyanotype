@@ -25,14 +25,14 @@
   },
   "essay": [
     { "kind": "lede-first", "text": {
-      "en": "A zoo? Not really mine — never was.",
-      "jp": "動物園? わたしの好きなものでは、なかった——ずっと、なかった。",
+      "en": "A zoo? Not really mine. Never was.",
+      "jp": "動物園？ わたしの好きなものでは、なかった。ずっと、なかった。",
       "cn": "动物园？向来不是我喜欢去的地方。"
     }},
     { "kind": "body", "text": {
-      "en": "But this one — the first place I have walked where animals were near enough to touch. Not large. And yet, somehow, wider.",
+      "en": "But this one, the first place I have walked where animals were near enough to touch. Not large. And yet, somehow, wider.",
       "jp": "けれどここは、わたしがこれまで歩いた中で、動物たちに手の届きそうな初めての場所だった。広いとは言えない。それでも、どこか、広かった。",
-      "cn": "但这里——是我走过的所有地方里，动物们近在咫尺。\n动物园本身并不大。却不知为何感觉更加宽阔。"
+      "cn": "但这里，是我走过的所有地方里，动物们近在咫尺。\n动物园本身并不大。却不知为何感觉更加宽阔。"
     }},
     { "kind": "body", "text": {
       "en": "Lawns rolling on and on, going gold with early autumn.",
@@ -55,14 +55,14 @@
       "cn": "一只蜥蜴，仓皇逃去。一只绵羊，低头吃草。一只鸵鸟，更是自由散漫。"
     }},
     { "kind": "dropline", "text": {
-      "en": "And so — I, too, came to love the zoo.",
-      "jp": "そうして——わたしもまた、動物園を好きになった。",
+      "en": "And so, I, too, came to love the zoo.",
+      "jp": "そうして、わたしもまた、動物園を好きになった。",
       "cn": "就这样，我也喜欢上了动物园。"
     }},
     { "kind": "dropline", "text": {
       "en": "If someone says they don't like zoos, that only means they have not yet found the one that belongs to them.",
       "jp": "動物園が好きじゃないと言う人は、まだ、自分にぴったりの動物園に出会っていないだけ。",
-      "cn": "如果有人说不喜欢动物园，那只是因为，他还没遇见属于自己的那一座。"
+      "cn": "如果有人说不喜欢动物园，那只是因为他还没遇见属于自己的那一座。"
     }}
   ],
   "credits": {
