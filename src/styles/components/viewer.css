@@ -1,0 +1,585 @@
+/* ---------- Masthead (per-roll header) ---------- */
+
+.masthead {
+  text-align: center;
+  margin-bottom: clamp(60px, 8vw, 112px);
+  padding-bottom: clamp(40px, 5vw, 64px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: clamp(24px, 4vw, 48px);
+}
+
+.masthead-line .kicker-right { color: var(--kodak-blue); }
+
+.masthead-title {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(56px, 9vw, 116px);
+  letter-spacing: -0.01em;
+  line-height: 0.96;
+  margin-bottom: clamp(20px, 3vw, 32px);
+  color: var(--ink);
+}
+
+.masthead-subtitle {
+  display: block;
+  margin-top: clamp(6px, 0.7vw, 12px);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(22px, 2.6vw, 36px);
+  letter-spacing: 0.005em;
+  line-height: 1.05;
+  color: var(--ink-soft);
+}
+
+.masthead-dateline {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.masthead-dateline .sep {
+  margin: 0 0.6em;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 720px) {
+  .masthead-line {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* ---------- Viewer (3-column grid: meta / stage / thumbs) ---------- */
+
+.viewer {
+  display: grid;
+  grid-template-columns: 140px 1fr 140px;
+  gap: clamp(28px, 3vw, 56px);
+  align-items: start;
+  margin-bottom: clamp(80px, 9vw, 132px);
+}
+
+.viewer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(22px, 2.2vw, 32px);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  padding-top: 8px;
+}
+
+.meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meta-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.meta-value {
+  font-size: 12px;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.pager-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.pager-link:hover { color: var(--kodak-blue); }
+
+.pager-sep {
+  margin: 0 0.4em;
+  color: var(--ink-faint);
+}
+
+.viewer-stage { text-align: center; }
+
+.stage-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(420px, 70vh, 760px);
+  max-width: clamp(420px, 52vw, 720px);
+  margin: 0 auto;
+}
+
+.stage-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  cursor: zoom-in;
+  transition: opacity 0.18s ease;
+}
+.stage-frame img.is-fading { opacity: 0; }
+.stage-frame img:hover { opacity: 0.94; }
+
+.viewer-stage figcaption {
+  margin-top: clamp(12px, 1.5vw, 18px);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.012em;
+  color: var(--ink-faint);
+  line-height: 1.45;
+}
+
+.stage-nav {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .stage-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  .stage-nav-counter {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--ink-faint);
+  }
+}
+
+.viewer-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 1.8vw, 28px);
+  max-height: clamp(420px, 72vh, 780px);
+  overflow-y: auto;
+  padding-top: 8px;
+  padding-right: 14px;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(26, 24, 23, 0.18) transparent;
+}
+
+.viewer-thumbs::-webkit-scrollbar { width: 4px; }
+.viewer-thumbs::-webkit-scrollbar-track { background: transparent; }
+.viewer-thumbs::-webkit-scrollbar-thumb {
+  background: rgba(26, 24, 23, 0.18);
+  border-radius: 2px;
+}
+
+.thumb {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.22s ease;
+}
+.thumb:hover { opacity: 0.85; }
+.thumb.is-active { opacity: 1; }
+
+.thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.thumb-label {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--ink-faint);
+}
+
+.thumb.is-active .thumb-label { color: var(--kodak-blue); }
+
+
+@media (max-width: 960px) {
+  .viewer {
+    grid-template-columns: 120px 1fr 120px;
+    gap: clamp(20px, 2.5vw, 32px);
+  }
+}
+
+@media (max-width: 720px) {
+  .viewer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .viewer-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 0;
+  }
+  .meta-block { padding: 0; }
+  .stage-frame {
+    height: auto;
+    max-height: 80vh;
+    max-width: 100%;
+    touch-action: pan-y pinch-zoom;
+  }
+  .stage-frame img {
+    width: 100%;
+    height: auto;
+  }
+  .viewer-thumbs {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: visible;
+    max-height: none;
+    gap: 12px;
+    padding-bottom: 8px;
+    padding-right: 0;
+  }
+  .thumb { flex: 0 0 80px; }
+}
+
+/* ---------- Calendar (mini month grids on home) ---------- */
+
+.calendar {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.calendar-heading {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 10.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--kodak-blue);
+  margin-bottom: clamp(28px, 3.4vw, 44px);
+}
+
+html[lang="ja"] .calendar-heading,
+html[lang="zh-Hans"] .calendar-heading {
+  text-transform: none;
+  letter-spacing: 0.18em;
+  font-size: 11.5px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(20px, 2.6vw, 40px);
+}
+
+@media (max-width: 960px) {
+  .calendar-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  /* On phones, show exactly one month per screen — no peek of the
+     next/previous month. The wrapper breaks out of body padding so
+     each panel can fill the full viewport width; the calendar
+     itself is then clamped to 280px and centred inside its panel. */
+  .calendar-viewport {
+    margin: 0 -24px;
+    overflow: hidden;
+  }
+  .calendar-grid {
+    display: flex;
+    grid-template-columns: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior: contain;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    gap: 0;
+    padding: 0;
+    scrollbar-width: none;
+  }
+  /* touch-action isn't inherited, so child cells would otherwise
+     allow vertical pan and let the page scroll while the user is
+     trying to swipe between months. */
+  .calendar-grid,
+  .calendar-grid * {
+    touch-action: pan-x;
+  }
+  .calendar-grid::-webkit-scrollbar { display: none; }
+  .mini-cal {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 0 12px;
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+  .mini-cal > * {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .calendar .calendar-heading {
+    /* SECTION title — outranks the per-month header below it. */
+    font-size: 15px;
+    letter-spacing: 0.34em;
+  }
+  .calendar .mini-cal-header {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  html[lang="ja"] .calendar .mini-cal-header,
+  html[lang="zh-Hans"] .calendar .mini-cal-header {
+    font-size: 15px;
+  }
+  .calendar .mini-cal-weekdays {
+    font-size: 12px;
+    margin-bottom: 14px;
+    gap: 15px;
+  }
+  .calendar .mini-cal-grid {
+    gap: 18px;
+  }
+  .calendar .mini-cal-cell {
+    font-size: 13px;
+  }
+  .calendar .mini-cal-circle {
+    inset: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+  }
+}
+
+.calendar-nav {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .calendar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 18px;
+    color: var(--ink-faint);
+  }
+  .calendar-nav-btn {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 6px 4px;
+    cursor: pointer;
+    color: inherit;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+  .calendar-nav-btn:hover { color: var(--ink); }
+  .calendar-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+  .calendar-nav-arrow {
+    width: 32px;
+    height: 12px;
+    display: block;
+  }
+  .calendar-nav-arrow--left { transform: scaleX(-1); }
+  .calendar-nav-dots {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .calendar-nav-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.3;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .calendar-nav-dot.is-active {
+    opacity: 1;
+    transform: scale(1.4);
+    background: var(--kodak-blue);
+  }
+}
+
+.mini-cal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* Force Inter for the whole calendar cell, regardless of page lang */
+  font-family: "Inter", sans-serif;
+}
+
+.mini-cal * {
+  font-family: inherit;
+}
+
+.mini-cal-header {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(13px, 1.15vw, 15px);
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+html[lang="ja"] .mini-cal-header,
+html[lang="zh-Hans"] .mini-cal-header {
+  /* keep digits in Inter even when the page font stack is CJK */
+  font-family: "Inter", "Hiragino Kaku Gothic ProN", "PingFang SC", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: clamp(11px, 1vw, 13px);
+  letter-spacing: 0.04em;
+}
+
+.mini-cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  font-family: "Inter", sans-serif;
+  font-size: 8.5px;
+  /* No letter-spacing here: trailing tracking would push the
+     2-letter weekday off-centre in its column relative to the
+     1- and 2-digit numbers below. */
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 4px;
+}
+
+.mini-cal-weekday {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* tabular-nums isn't a thing for letters, but kerning off keeps
+     each weekday's optical centre on the column centre. */
+  font-feature-settings: "kern" 0;
+}
+
+.mini-cal-cell {
+  font-feature-settings: "tnum" 1;
+}
+
+.mini-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.mini-cal-cell {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Force Inter for the day numbers — keeps the calendar consistent
+     across EN / JP / CN even when the page font stack changes. */
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.mini-cal-cell--empty { visibility: hidden; }
+
+.mini-cal-cell--mark {
+  color: var(--kodak-blue);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mini-cal-day {
+  position: relative;
+  z-index: 1;
+}
+
+.mini-cal-circle {
+  position: absolute;
+  inset: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  pointer-events: none;
+  overflow: visible;
+  transform: rotate(-3deg);
+  color: var(--kodak-blue);
+}
+
+.mini-cal-circle path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0;
+  transition:
+    stroke-dashoffset 0.7s cubic-bezier(0.65, 0.05, 0.35, 1),
+    opacity 0.18s ease;
+}
+
+.mini-cal-cell--mark:hover .mini-cal-circle path {
+  opacity: 0.95;
+  stroke-dashoffset: 0;
+}
+
+/* ---------- Issue colophon (footer text on home) ---------- */
+
+.issue-colophon {
+  text-align: center;
+  margin-top: clamp(24px, 3vw, 40px);
+  padding-bottom: 0;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* ---------- Per-roll Colophon (film/camera credits) ---------- */
+
+.colophon {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.colophon .sep {
+  margin: 0 0.8em;
+  color: var(--ink-faint);
+  opacity: 0.5;
+}
+

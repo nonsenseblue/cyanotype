@@ -1,0 +1,377 @@
+/* ============================================================
+   Chapter page (chapter masthead + day sections)
+   ============================================================ */
+
+.chapter-page { max-width: 1320px; margin: 0 auto; }
+
+.chapter-masthead {
+  position: relative;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: clamp(80px, 9vw, 110px);
+}
+
+@media (max-width: 720px) {
+  .chapter-masthead { padding-bottom: 80px; }
+}
+
+/* Guardian marks on either side of the chapter title */
+.chapter-mark {
+  position: absolute;
+  color: var(--kodak-blue);
+  opacity: 0.7;
+  overflow: visible;
+  pointer-events: none;
+  display: block;
+  width: clamp(36px, 4.4vw, 64px);
+  height: auto;
+}
+
+/* Marks float on either side of the title, like the hero marks on the index. */
+.chapter-mark--left {
+  top: 30%; left: 14%;
+  --rot: -10deg;
+  transform: rotate(var(--rot));
+}
+
+.chapter-mark--right {
+  top: 30%; right: 14%;
+  --rot: 10deg;
+  transform: rotate(var(--rot));
+}
+
+@media (max-width: 720px) {
+  /* On phones, the title is wide enough that side-flanked marks collide
+     with it. Drop the marks below the lede instead — anchored to the
+     masthead's bottom padding. */
+  .chapter-mark { width: 36px; height: auto; }
+  .chapter-mark--left { top: auto; bottom: 10px; left: 8%; }
+  .chapter-mark--right { top: auto; bottom: 10px; right: 8%; }
+}
+
+/* Tiny stars — small punctuation in the masthead, never above the title */
+.chapter-decor {
+  position: absolute;
+  width: clamp(12px, 1.2vw, 18px);
+  height: clamp(12px, 1.2vw, 18px);
+  color: var(--kodak-blue);
+  opacity: 0.55;
+  overflow: visible;
+  pointer-events: none;
+}
+.chapter-decor--bl {
+  top: 8%; left: 24%;
+  --rot: 14deg;
+  transform: rotate(var(--rot));
+}
+.chapter-decor--br {
+  top: 6%; right: 24%;
+  --rot: -10deg;
+  transform: rotate(var(--rot));
+}
+
+@media (max-width: 720px) {
+  /* Tiny stars also drop below the lede on phones. */
+  .chapter-decor--bl { top: auto; bottom: 16px; left: 32%; }
+  .chapter-decor--br { top: auto; bottom: 20px; right: 32%; }
+}
+
+.chapter-decor path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+
+.chapter-masthead.is-visible .chapter-decor path {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.65, 0.05, 0.35, 1);
+}
+
+.chapter-masthead.is-visible .chapter-decor--bl path { transition-delay: 1.4s; }
+.chapter-masthead.is-visible .chapter-decor--br path { transition-delay: 1.7s; }
+
+.chapter-mark path,
+.chapter-mark circle,
+.chapter-mark ellipse {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.chapter-masthead.is-visible .chapter-mark path,
+.chapter-masthead.is-visible .chapter-mark circle,
+.chapter-masthead.is-visible .chapter-mark ellipse {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.6s cubic-bezier(0.65, 0.05, 0.35, 1) 0.4s;
+}
+
+/* ---------- Hand-drawn marks — hover wobble (a gentle nudge) ---------- */
+
+/* The mark's resting rotation is held in --rot per mark so the wobble can
+   preserve it. Default to 0 for any mark that hasn't opted in. */
+@keyframes wobble {
+  0%   { transform: rotate(var(--rot, 0deg)) translateX(0); }
+  25%  { transform: rotate(var(--rot, 0deg)) translateX(-3px); }
+  75%  { transform: rotate(var(--rot, 0deg)) translateX(3px); }
+  100% { transform: rotate(var(--rot, 0deg)) translateX(0); }
+}
+
+/* hero-mark-6 is horizontally centred via translateX(-50%); preserve that
+   while wobbling. */
+@keyframes wobbleCenter {
+  0%, 100% { transform: translateX(-50%) rotate(var(--rot, 0deg)); }
+  25%      { transform: translateX(calc(-50% - 3px)) rotate(var(--rot, 0deg)); }
+  75%      { transform: translateX(calc(-50% + 3px)) rotate(var(--rot, 0deg)); }
+}
+
+/* hero-decor blocks pointer events for the whole layer — unlock the marks
+   themselves so they can be hovered individually. */
+.hero-decor { pointer-events: none; }
+.hero-mark { pointer-events: auto; cursor: default; }
+
+.hero.is-visible .hero-mark:hover {
+  animation: wobble 1.6s cubic-bezier(0.22, 0.6, 0.36, 1);
+}
+
+.hero.is-visible .hero-mark.hero-mark-6:hover {
+  animation: wobbleCenter 1.6s cubic-bezier(0.22, 0.6, 0.36, 1);
+}
+
+.chapter-masthead.is-visible .chapter-mark:hover {
+  animation: wobble 1.8s cubic-bezier(0.22, 0.6, 0.36, 1);
+}
+
+.chapter-masthead.is-visible .chapter-decor:hover {
+  animation: wobble 1.4s cubic-bezier(0.22, 0.6, 0.36, 1);
+}
+
+.chapter-masthead.is-visible .chapter-mark--right path,
+.chapter-masthead.is-visible .chapter-mark--right circle,
+.chapter-masthead.is-visible .chapter-mark--right ellipse {
+  transition-delay: 0.9s;
+}
+
+
+.chapter-masthead-title {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(44px, 6.5vw, 80px);
+  letter-spacing: -0.008em;
+  line-height: 1.0;
+  margin: clamp(20px, 3vw, 32px) 0 clamp(12px, 1.8vw, 18px);
+  color: var(--ink);
+}
+
+.chapter-masthead-dateline {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.chapter-masthead-lede {
+  margin-top: clamp(20px, 2.6vw, 28px);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(16px, 1.5vw, 20px);
+  letter-spacing: 0.005em;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 56ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chapter-masthead-kit {
+  margin-top: clamp(20px, 2.4vw, 26px);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px 14px;
+}
+
+.chapter-masthead-kit .kit-part {
+  white-space: nowrap;
+}
+
+.chapter-masthead-kit .kit-sep {
+  opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+  .chapter-masthead-kit {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    gap: 4px;
+  }
+  .chapter-masthead-kit .kit-sep {
+    display: none;
+  }
+  .chapter-masthead-kit .kit-part {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+.day-section { margin-bottom: clamp(40px, 6vw, 80px); }
+
+.day-masthead {
+  text-align: center;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.day-line {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--kodak-blue);
+  margin-bottom: clamp(18px, 2.4vw, 28px);
+}
+
+.day-title {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(26px, 3.6vw, 44px);
+  letter-spacing: -0.003em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: clamp(14px, 1.8vw, 22px);
+}
+
+.day-dateline {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.day-dateline .sep {
+  margin: 0 0.6em;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 720px) {
+  .chapter-masthead-title { font-size: clamp(36px, 9vw, 56px); }
+  .day-title { font-size: clamp(22px, 6vw, 34px); }
+}
+
+.chapter-coming-soon {
+  text-align: center;
+  margin: clamp(60px, 8vw, 120px) auto;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(16px, 1.5vw, 20px);
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+
+html[lang="ja"] .chapter-coming-soon,
+html[lang="zh-Hans"] .chapter-coming-soon {
+  font-style: normal;
+}
+
+/* ---------- Next chapter / Back to contents (footer of chapter page) ---------- */
+
+.chapter-next {
+  margin-top: clamp(72px, 9vw, 132px);
+  text-align: center;
+}
+
+.chapter-next-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(8px, 1vw, 14px);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.25s ease;
+}
+.chapter-next-link:hover { opacity: 0.7; }
+
+.chapter-next-label {
+  font-family: var(--font-sans);
+  font-size: 10.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+html[lang="ja"] .chapter-next-label,
+html[lang="zh-Hans"] .chapter-next-label {
+  text-transform: none;
+  letter-spacing: 0.18em;
+  font-size: 11.5px;
+}
+
+.chapter-next-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(14px, 1.3vw, 17px);
+  letter-spacing: 0.01em;
+  color: var(--kodak-blue);
+  line-height: 1.2;
+}
+
+html[lang="ja"] .chapter-next-title,
+html[lang="zh-Hans"] .chapter-next-title {
+  font-style: normal;
+  font-size: clamp(13px, 1.15vw, 15px);
+}
+
+.chapter-next-arrow {
+  width: 32px;
+  height: 12px;
+  overflow: visible;
+}
+
+.chapter-next-arrow--left { transform: scaleX(-1); }
+
+@keyframes arrowNudge {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+@keyframes arrowNudgeLeft {
+  0%   { transform: scaleX(-1) translateX(0); }
+  50%  { transform: scaleX(-1) translateX(6px); }
+  100% { transform: scaleX(-1) translateX(0); }
+}
+
+.chapter-next-link:hover .chapter-next-arrow--right {
+  animation: arrowNudge 1.5s cubic-bezier(0.22, 0.6, 0.36, 1);
+}
+.chapter-next-link:hover .chapter-next-arrow--left {
+  animation: arrowNudgeLeft 1.5s cubic-bezier(0.22, 0.6, 0.36, 1);
+}
+
+/* Pen-drawn entrance for the arrow */
+.chapter-next-arrow path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.chapter-next.is-visible .chapter-next-arrow-shaft {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.7s cubic-bezier(0.65, 0.05, 0.35, 1) 0.3s;
+}
+
+.chapter-next.is-visible .chapter-next-arrow-head {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.45s cubic-bezier(0.65, 0.05, 0.35, 1) 0.95s;
+}
+

@@ -1,10 +1,10 @@
 import type { RouteRecord } from 'vite-react-ssg';
-import App from './App';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import SettingsPage from './pages/SettingsPage';
-import ChapterRoute from './pages/ChapterRoute';
-import issue from './data/issue.json';
+import App from '@/App';
+import HomePage from '@/pages/HomePage';
+import AboutPage from '@/pages/AboutPage';
+import SettingsPage from '@/pages/SettingsPage';
+import ChapterRoute from '@/pages/ChapterRoute';
+import issue from '@/data/issue.json';
 
 export const routes: RouteRecord[] = [
   {

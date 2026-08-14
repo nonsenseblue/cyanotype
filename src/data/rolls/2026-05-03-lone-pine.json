@@ -73,15 +73,15 @@
   },
   "photoBase": "/photos/2026-05-03-lone-pine",
   "photos": [
+    { "file": "10", "caption": { "en": "—", "jp": "—", "cn": "—" } },
     { "file": "01", "caption": { "en": "—", "jp": "—", "cn": "—" } },
-    { "file": "02", "caption": { "en": "—", "jp": "—", "cn": "—" } },
+    { "file": "09", "caption": { "en": "—", "jp": "—", "cn": "—" } },
     { "file": "03", "caption": { "en": "—", "jp": "—", "cn": "—" } },
     { "file": "04", "caption": { "en": "—", "jp": "—", "cn": "—" } },
     { "file": "05", "caption": { "en": "—", "jp": "—", "cn": "—" } },
     { "file": "06", "caption": { "en": "—", "jp": "—", "cn": "—" } },
     { "file": "07", "caption": { "en": "—", "jp": "—", "cn": "—" } },
     { "file": "08", "caption": { "en": "—", "jp": "—", "cn": "—" } },
-    { "file": "09", "caption": { "en": "—", "jp": "—", "cn": "—" } },
-    { "file": "10", "caption": { "en": "—", "jp": "—", "cn": "—" } }
+    { "file": "02", "caption": { "en": "—", "jp": "—", "cn": "—" } }
   ]
 }

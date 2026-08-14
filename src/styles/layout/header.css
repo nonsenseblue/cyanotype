@@ -1,0 +1,455 @@
+/* ============================================================
+   layout.css — site header, masthead, viewer (3-col grid),
+                issue/index page, colophon
+   ============================================================ */
+
+/* ---------- Site header (global nav) ---------- */
+
+.site-header {
+  max-width: 1320px;
+  margin: 0 auto clamp(40px, 5vw, 72px);
+  padding-bottom: clamp(20px, 2.4vw, 30px);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(16px, 2.5vw, 32px);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.site-brand {
+  /* Always use the Cormorant italic — even under CJK languages —
+     because "cyanotype" is a Latin word and looks best in its
+     proper serif italic. */
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(26px, 2.6vw, 34px);
+  /* Tight line-height so the italic glyph's optical centre lines up with
+     align-items: center on the surrounding flex row. */
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: none;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+.site-brand:hover { color: var(--kodak-blue); }
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(12px, 1.6vw, 22px);
+}
+
+.site-nav-link,
+.site-contents-link {
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.site-nav-link:hover,
+.site-contents-link:hover { color: var(--ink); }
+
+.site-nav-link.is-current,
+.site-contents-link.is-current { color: var(--kodak-blue); }
+
+.site-nav-link {
+  letter-spacing: 0.18em;
+  font-size: 10.5px;
+}
+
+/* CJK header nav — larger so kanji/汉字 read comfortably */
+html[lang="ja"] .site-nav-link,
+html[lang="zh-Hans"] .site-nav-link,
+html[lang="ja"] .site-contents-link,
+html[lang="zh-Hans"] .site-contents-link {
+  font-size: 13.5px;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.site-contents-link { flex-shrink: 0; }
+
+.site-about-link {
+  position: relative;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-left: auto;
+  padding: 4px 4px;
+  transition: color 0.2s ease;
+}
+.site-about-label { position: relative; z-index: 1; }
+.site-about-link:hover { color: var(--kodak-blue); }
+.site-about-link.is-current { color: var(--kodak-blue); }
+
+/* Hand-drawn brush ellipse — same idiom as the language buttons. */
+.site-about-circle {
+  position: absolute;
+  top: -8px;
+  left: -14px;
+  width: calc(100% + 28px);
+  height: calc(100% + 18px);
+  pointer-events: none;
+  overflow: visible;
+  transform: rotate(-2deg);
+}
+.site-about-circle path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0;
+  transition:
+    stroke-dashoffset 0.7s cubic-bezier(0.65, 0.05, 0.35, 1),
+    opacity 0.18s ease;
+}
+.site-about-link:hover .site-about-circle path {
+  opacity: 0.85;
+  stroke-dashoffset: 0;
+}
+.site-about-link.is-current .site-about-circle path {
+  opacity: 1;
+  stroke-dashoffset: 0;
+  transition:
+    stroke-dashoffset 0.9s cubic-bezier(0.65, 0.05, 0.35, 1),
+    opacity 0.18s ease;
+}
+
+html[lang="ja"] .site-about-link,
+html[lang="zh-Hans"] .site-about-link {
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: none;
+}
+
+@media (max-width: 720px) {
+  /* The drawer covers the About link on phones, so hide it from the
+     site header to keep things tidy. */
+  .site-about-link { display: none; }
+}
+
+/* Burger button (hidden on desktop, visible on SP) */
+
+.site-burger {
+  display: none;
+  position: relative;
+  z-index: 120; /* above drawer so the × is always visible */
+  background: none;
+  border: none;
+  padding: 6px;
+  margin: -6px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+}
+
+.site-burger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--ink);
+  transition: transform 0.22s ease, opacity 0.18s ease;
+  transform-origin: center;
+}
+
+.site-burger.is-open {
+  /* When the drawer is open, lock the close × to the drawer's
+     top-right corner so it travels with the drawer instead of
+     staying anchored in the header. */
+  position: fixed;
+  top: 78px;
+  right: max(28px, calc(50vw - 144px));
+  z-index: 120;
+}
+.site-burger.is-open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.site-burger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.site-burger.is-open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Drawer (mobile fullscreen menu) */
+
+.site-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 28, 56, 0.32);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 85;
+  animation: overlay-in 0.18s ease-out;
+}
+
+@keyframes overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.site-drawer {
+  position: fixed;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 28px);
+  max-width: 320px;
+  background: var(--paper);
+  color: var(--ink);
+  z-index: 90;
+  padding: 22px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: drawer-in 0.22s ease-out;
+  overflow-y: auto;
+  max-height: calc(100vh - 88px);
+  box-shadow:
+    0 1px 1px rgba(10, 28, 56, 0.22),
+    0 8px 22px rgba(10, 28, 56, 0.25);
+}
+
+
+@keyframes drawer-in {
+  from { opacity: 0; transform: translate(-50%, -6px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.site-drawer-link {
+  display: block;
+  text-decoration: none;
+  padding: 9px 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  color: var(--ink-soft);
+}
+
+.site-drawer .site-drawer-link:first-of-type {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  padding: 4px 0 14px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-drawer-link.is-current { color: var(--kodak-blue); }
+
+.site-drawer-postmark {
+  position: absolute;
+  bottom: 22px;
+  right: 22px;
+  width: 78px;
+  height: 78px;
+  pointer-events: none;
+  color: var(--kodak-blue);
+  opacity: 0.42;
+  transform: rotate(-14deg);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+/* ---------- Drawer contents (simple text list) ---------- */
+
+.drawer-link {
+  display: block;
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  padding: 7px 2px;
+}
+.drawer-link.is-current { color: var(--kodak-blue); }
+
+.drawer-link--home {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--kodak-blue);
+  padding: 2px 2px 16px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.drawer-vol {
+  margin-top: 22px;
+}
+.drawer-vol:first-of-type { margin-top: 18px; }
+
+.drawer-vol-label {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 4px;
+  padding-left: 2px;
+}
+
+/* Footer row in the drawer: About · star · language switcher,
+   sitting on one line beneath a thin rule. */
+.drawer-footer {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.drawer-footer > * { flex-shrink: 0; }
+.drawer-footer .site-lang--drawer .site-lang-sep { margin: 0 0.5em; }
+
+.drawer-link--about {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  margin: 0;
+  padding: 2px;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--kodak-blue);
+  text-align: left;
+  flex-shrink: 0;
+}
+
+/* Hand-drawn star dividing About from the language switcher. */
+.drawer-divider-star {
+  display: block;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  color: var(--kodak-blue);
+  opacity: 0.6;
+  overflow: visible;
+}
+
+html[lang="ja"] .drawer-link,
+html[lang="zh-Hans"] .drawer-link {
+  font-style: normal;
+  font-size: 13px;
+}
+html[lang="ja"] .drawer-link--home,
+html[lang="zh-Hans"] .drawer-link--home,
+html[lang="ja"] .drawer-link--about,
+html[lang="zh-Hans"] .drawer-link--about {
+  font-size: 12px;
+}
+
+.site-lang--drawer {
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  border: none;
+  justify-content: center;
+}
+.site-lang--drawer .site-lang-btn {
+  font-size: 9px;
+  padding: 4px 3px;
+}
+.site-lang--drawer .site-lang-circle {
+  top: -3px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 6px);
+}
+.site-lang--drawer .site-lang-sep { margin: 0 0.6em; }
+
+/* Home → About entry point, between the bottom HandRule and the colophon. */
+.home-about-cta {
+  text-align: center;
+  margin: clamp(36px, 5vw, 64px) auto clamp(20px, 3vw, 32px);
+}
+
+.home-about-link {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--kodak-blue);
+  text-decoration: none;
+  padding: 4px 6px;
+  transition: color 0.2s ease;
+}
+.home-about-label { position: relative; z-index: 1; }
+
+html[lang="ja"] .home-about-link,
+html[lang="zh-Hans"] .home-about-link {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: none;
+}
+
+/* Hand-drawn brush ellipse — appears on hover, same idiom as the
+   header About link and the language buttons. */
+.home-about-circle {
+  position: absolute;
+  top: -6px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 14px);
+  pointer-events: none;
+  overflow: visible;
+  color: var(--kodak-blue);
+  transform: rotate(-2deg);
+}
+.home-about-circle path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0;
+  transition:
+    stroke-dashoffset 0.7s cubic-bezier(0.65, 0.05, 0.35, 1),
+    opacity 0.18s ease;
+}
+.home-about-link:hover .home-about-circle path {
+  opacity: 0.85;
+  stroke-dashoffset: 0;
+}
+
+/* Small hand-drawn star between the About link and the colophon. */
+.home-about-star {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: clamp(20px, 2.4vw, 32px) auto clamp(10px, 1.4vw, 18px);
+  color: var(--kodak-blue);
+  opacity: 0.55;
+  overflow: visible;
+}
+

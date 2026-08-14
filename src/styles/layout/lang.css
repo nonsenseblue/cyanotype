@@ -1,0 +1,86 @@
+/* ============================================================
+   Site language switcher (EN · JP · CN)
+   ============================================================ */
+
+.site-lang {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+}
+
+.site-lang-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-lang-sep {
+  margin: 0 0.85em;
+  color: var(--ink-faint);
+  opacity: 0.6;
+}
+
+.site-lang-btn {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 6px 4px;
+  margin: 0;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: 0.2em;
+  color: var(--ink-soft);
+  transition: color 0.2s;
+}
+.site-lang-btn:hover { color: var(--ink); }
+.site-lang-btn.is-current { color: var(--kodak-blue); }
+
+/* hand-drawn brush circle — drawn by pen on hover & for current */
+.site-lang-circle {
+  position: absolute;
+  top: -5px;
+  left: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 10px);
+  pointer-events: none;
+  overflow: visible;
+  transform: rotate(-2deg);
+}
+
+.site-lang-circle path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0;
+  transition:
+    stroke-dashoffset 0.7s cubic-bezier(0.65, 0.05, 0.35, 1),
+    opacity 0.18s ease;
+}
+
+.site-lang-btn:hover .site-lang-circle path {
+  opacity: 0.85;
+  stroke-dashoffset: 0;
+}
+
+.site-lang-btn.is-current .site-lang-circle path {
+  opacity: 1;
+  stroke-dashoffset: 0;
+  transition:
+    stroke-dashoffset 0.9s cubic-bezier(0.65, 0.05, 0.35, 1),
+    opacity 0.25s ease;
+}
+
+.site-lang-label {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 720px) {
+  .site-lang--desktop { display: none; }
+}
+@media (min-width: 721px) {
+  .site-lang--drawer { display: none; }
+}
+

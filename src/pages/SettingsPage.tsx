@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { useCursor } from '../contexts/CursorContext';
-import { CURSOR_OPTIONS } from '../components/cursorOptions';
+import { useCursor } from '@/contexts/CursorContext';
+import { CURSOR_OPTIONS } from '@/components/cursor/cursorOptions';
 
 export default function SettingsPage() {
   const { mode, setMode } = useCursor();

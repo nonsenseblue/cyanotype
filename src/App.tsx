@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import { LanguageProvider, useLang } from './contexts/LanguageContext';
-import { CursorProvider } from './contexts/CursorContext';
-import { Lightbox } from './components/Lightbox';
-import { SiteHeader } from './components/SiteHeader';
-import { CustomCursor } from './components/CustomCursor';
-import { OpeningSequence } from './components/OpeningSequence';
-import { useLightbox } from './hooks/useLightbox';
-import issue from './data/issue.json';
+import { LanguageProvider, useLang } from '@/contexts/LanguageContext';
+import { CursorProvider } from '@/contexts/CursorContext';
+import { Lightbox } from '@/components/viewer/Lightbox';
+import { SiteHeader } from '@/components/layout/SiteHeader';
+import { CustomCursor } from '@/components/cursor/CustomCursor';
+import { OpeningSequence } from '@/components/cursor/OpeningSequence';
+import { useLightbox } from '@/hooks/useLightbox';
+import issue from '@/data/issue.json';
 
 function Layout() {
   const location = useLocation();
